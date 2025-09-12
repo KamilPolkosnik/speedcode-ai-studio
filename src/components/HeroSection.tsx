@@ -22,7 +22,7 @@ const HeroSection = () => {
             </p>
 
                         <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="text-foreground">Oprogramowania, aplikacje, strony i sklepy internetowe, </span>
+              <span className="text-foreground">Aplikacje, strony i sklepy internetowe, </span>
                                         <span className="text-primary italic">rozwiązania szyte na miarę.</span>
             </h1>
             
@@ -44,7 +44,7 @@ const HeroSection = () => {
         </div>
         
         <div className="mt-16 flex flex-col items-center">
-          <div className="text-5xl font-bold uppercase tracking-wider mb-4 pb-5">
+          <div className="text-5xl font-bold uppercase tracking-wider mb-4 pb-6">
             ZDOBĄDŹ PRZEWAGĘ:
           </div>
           <div className="grid md:grid-cols-4 gap-8 max-w-4xl">
