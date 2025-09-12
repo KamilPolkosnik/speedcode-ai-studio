@@ -8,7 +8,7 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="text-foreground">Tworzymy </span>
+              <span className="text-foreground">Tworzymy nic takeigo co fajnego jest</span>
               <span className="text-primary italic">dedykowane</span>
               <span className="text-foreground"> rozwiązania dla Twojej firmy </span>
               <span className="text-primary italic">szybciej</span>
