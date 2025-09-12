@@ -18,7 +18,7 @@ const HeroSection = () => {
             
             <p className="text-lg text-muted-foreground max-w-2xl">
               Dzięki dobieraniu odpowiednich technologii do każdego projektu, realizujemy produkty cyfrowe 
-              <span className="font-bold">do 40% szybciej.</span> Nasze rozwiązania łączą rozwój na miarę z AI oraz platformami No-Code/Low-Code, 
+              <span className="font-bold"> do 40% szybciej.</span> Nasze rozwiązania łączą rozwój na miarę z AI oraz platformami No-Code/Low-Code, 
               obejmując również strony internetowe i sklepy online.
             </p>
 
