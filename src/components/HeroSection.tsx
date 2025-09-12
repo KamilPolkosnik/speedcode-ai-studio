@@ -60,10 +60,6 @@ const HeroSection = () => {
               <div className="text-3xl font-bold text-primary mb-2">24/7</div>
               <p className="text-sm text-muted-foreground">Ciągła dostępność</p>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">No-Code/Low-Code</div>
-              <p className="text-sm text-muted-foreground">Szybkie i tanie wdrożenie</p>
-            </div>
           </div>
         </div>
       </div>
