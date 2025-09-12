@@ -60,11 +60,11 @@ const CaseStudiesSection = () => {
         <div className="mt-20 text-center">
           <div className="bg-gradient-secondary text-white p-12 rounded-lg">
             <h2 className="text-5xl font-bold mb-4">
-              <span className="block">Dostarczamy o 40%</span>
-              <span className="block text-3xl">większą wartość biznesową.</span>
+              <span className="block">Korzystaj ze swojego oprogramowania</span>
+              <span className="block text-3xl">40% szybciej i taniej.</span>
             </h2>
-            <p className="text-xl mb-2">Tworzone inaczej.</p>
-            <p className="text-lg mb-8">Dostarczane lepiej.</p>
+            <p className="text-xl mb-2">Tworzone szybciej.</p>
+            <p className="text-lg mb-8">Do tego lepiej.</p>
             <Button 
               size="lg" 
               variant="outline"
