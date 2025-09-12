@@ -22,7 +22,7 @@ const HeroSection = () => {
             </p>
 
                         <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="text-foreground">Aplikacje, strony i sklepy internetowe, </span>
+              <span className="text-foreground">Oprogramowania, aplikacje, strony i sklepy internetowe, </span>
                                         <span className="text-primary italic">rozwiązania szyte na miarę.</span>
             </h1>
             
@@ -44,25 +44,25 @@ const HeroSection = () => {
         </div>
         
         <div className="mt-16 flex flex-col items-center">
-          <div className="text-5xl font-bold uppercase tracking-wider mb-4 pb-6">
+          <div className="text-5xl font-bold uppercase tracking-wider mb-4 pb-5">
             ZDOBĄDŹ PRZEWAGĘ:
           </div>
           <div className="grid md:grid-cols-4 gap-8 max-w-4xl">
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">40%</div>
-              <p className="text-sm text-muted-foreground">Szybsze wdrożenie</p>
+              <p className="text-sm text-muted-foreground">Szybsze i tańsze wdrożenie</p>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">AI</div>
-              <p className="text-sm text-muted-foreground">Zaawansowana automatyzacja</p>
+              <p className="text-sm text-muted-foreground">Skuteczność dzięki najnowszej technologii</p>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">24/7</div>
               <p className="text-sm text-muted-foreground">Ciągła dostępność</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">No-Code</div>
-              <p className="text-sm text-muted-foreground">Szybkie prototypowanie</p>
+              <div className="text-3xl font-bold text-primary mb-2">No-Code/Low-Code</div>
+              <p className="text-sm text-muted-foreground">Szybkie i tanie wdrożenie</p>
             </div>
           </div>
         </div>
