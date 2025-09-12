@@ -61,7 +61,7 @@ const CaseStudiesSection = () => {
           <div className="bg-gradient-secondary text-white p-12 rounded-lg">
             <h2 className="text-5xl font-bold mb-4">
               <span className="block text-3xl">Korzystaj ze swojego oprogramowania</span>
-              <span className="block text-xl">40% szybciej i taniej.</span>
+              <span className="block">40% szybciej i taniej.</span>
             </h2>
             <p className="text-xl mb-2">Tworzone szybciej.</p>
             <p className="text-lg mb-8">Do tego lepiej.</p>
