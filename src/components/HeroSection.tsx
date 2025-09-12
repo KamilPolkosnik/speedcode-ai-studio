@@ -10,7 +10,7 @@ const HeroSection = () => {
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
               <span className="text-foreground">Tworzymy </span>
               <span className="text-primary italic">dedykowane</span>
-              <span className="text-foreground"> rozwiązania dla firm </span>
+              <span className="text-foreground"> rozwiązania dla Twojej firmy </span>
               <span className="text-primary italic">szybciej</span>
               <span className="text-foreground"> i </span>
               <span className="text-primary italic">efektywniej</span>
@@ -21,6 +21,10 @@ const HeroSection = () => {
               do 40% szybciej. Nasze rozwiązania łączą rozwój na miarę z AI oraz platformami No-Code/Low-Code, 
               obejmując również strony internetowe i sklepy online.
             </p>
+
+                        <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+              <span className="text-foreground">Oprogramowanie, aplikacje, strony i sklepy internetowe, rozwiązania szyte na miarę.</span>
+            </h1>
             
             <Button 
               size="lg" 
