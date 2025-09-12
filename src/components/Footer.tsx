@@ -16,39 +16,39 @@ const Footer = () => {
               <span className="text-xl font-bold">SpeedCode</span>
             </div>
             <p className="text-muted mb-4">
-              AI software house developing custom software for businesses faster and more efficiently.
+              AI software house tworzący dedykowane oprogramowanie dla firm szybciej i efektywniej.
             </p>
             <p className="text-sm text-muted">
-              © 2024 SpeedCode sp. z o.o. All rights reserved.
+              © 2024 SpeedCode sp. z o.o. Wszelkie prawa zastrzeżone.
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="font-bold mb-4">Services</h4>
+            <h4 className="font-bold mb-4">Usługi</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-muted hover:text-background transition-colors">Web Development</a></li>
-              <li><a href="#" className="text-muted hover:text-background transition-colors">Mobile Apps</a></li>
-              <li><a href="#" className="text-muted hover:text-background transition-colors">AI Solutions</a></li>
+              <li><a href="#" className="text-muted hover:text-background transition-colors">Rozwój Stron Web</a></li>
+              <li><a href="#" className="text-muted hover:text-background transition-colors">Sklepy Online</a></li>
+              <li><a href="#" className="text-muted hover:text-background transition-colors">Aplikacje Mobilne</a></li>
+              <li><a href="#" className="text-muted hover:text-background transition-colors">Rozwiązania AI</a></li>
               <li><a href="#" className="text-muted hover:text-background transition-colors">No-Code/Low-Code</a></li>
             </ul>
           </div>
 
           {/* Company */}
           <div>
-            <h4 className="font-bold mb-4">Company</h4>
+            <h4 className="font-bold mb-4">Firma</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#about" className="text-muted hover:text-background transition-colors">About Us</a></li>
-              <li><a href="#case-studies" className="text-muted hover:text-background transition-colors">Case Studies</a></li>
-              <li><a href="#blog" className="text-muted hover:text-background transition-colors">Blog</a></li>
-              <li><a href="#contact" className="text-muted hover:text-background transition-colors">Contact</a></li>
+              <li><a href="#about" className="text-muted hover:text-background transition-colors">O Nas</a></li>
+              <li><a href="#case-studies" className="text-muted hover:text-background transition-colors">Studia Przypadków</a></li>
+              <li><a href="#contact" className="text-muted hover:text-background transition-colors">Kontakt</a></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-muted mt-8 pt-8 text-center">
           <p className="text-sm text-muted">
-            Made with 💙 by SpeedCode - AI software house
+            Stworzone z 💙 przez SpeedCode - AI software house
           </p>
         </div>
       </div>

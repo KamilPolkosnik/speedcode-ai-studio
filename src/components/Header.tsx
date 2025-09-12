@@ -1,7 +1,21 @@
 import { Button } from "@/components/ui/button";
 import speedCodeLogo from "@/assets/speedcode-logo.png";
+import { useState } from "react";
+import { Moon, Sun } from "lucide-react";
 
 const Header = () => {
+  const [language, setLanguage] = useState("PL");
+  const [isDark, setIsDark] = useState(false);
+
+  const toggleLanguage = () => {
+    setLanguage(language === "PL" ? "EN" : "PL");
+  };
+
+  const toggleTheme = () => {
+    setIsDark(!isDark);
+    document.documentElement.classList.toggle("dark");
+  };
+
   return (
     <header className="bg-background border-b border-border">
       <div className="container mx-auto px-4">
@@ -17,25 +31,25 @@ const Header = () => {
           
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#services" className="text-foreground hover:text-primary transition-colors">
-              SERVICES
+              {language === "PL" ? "USŁUGI" : "SERVICES"}
             </a>
             <a href="#case-studies" className="text-foreground hover:text-primary transition-colors">
-              CASE STUDIES
-            </a>
-            <a href="#blog" className="text-foreground hover:text-primary transition-colors">
-              BLOG
+              {language === "PL" ? "PROJEKTY" : "CASE STUDIES"}
             </a>
             <a href="#about" className="text-foreground hover:text-primary transition-colors">
-              ABOUT US
+              {language === "PL" ? "O NAS" : "ABOUT US"}
             </a>
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button variant="outline" className="hidden md:block">
-              EN
+            <Button variant="outline" onClick={toggleTheme} size="sm" className="p-2">
+              {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            </Button>
+            <Button variant="outline" onClick={toggleLanguage} className="hidden md:block">
+              {language}
             </Button>
             <Button className="bg-primary text-primary-foreground hover:bg-primary-variant">
-              CONTACT US
+              {language === "PL" ? "KONTAKT" : "CONTACT US"}
             </Button>
           </div>
         </div>

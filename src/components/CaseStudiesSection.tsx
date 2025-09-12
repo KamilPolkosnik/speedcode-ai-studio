@@ -6,19 +6,19 @@ const CaseStudiesSection = () => {
     {
       category: "IT",
       title: "DS STREAM",
-      description: "A modern website built in Webflow for an IT company — with a focus on redesign and efficient content management.",
+      description: "Nowoczesna strona internetowa zbudowana w Webflow dla firmy IT — z naciskiem na redesign i wydajne zarządzanie treścią.",
       image: "🖥️"
     },
     {
       category: "Pet-Tech",
       title: "Psinder",
-      description: "A mobile application transforming the dog adoption process in Poland by seamlessly connecting shelters, rescues, and future pet owners in one centralized platform.",
+      description: "Aplikacja mobilna rewolucjonizująca proces adopcji psów w Polsce poprzez płynne łączenie schronisk, organizacji ratunkowych i przyszłych właścicieli w jednej scentralizowanej platformie.",
       image: "🐕"
     },
     {
       category: "IT",
       title: "Partnerplace",
-      description: "Comprehensive platform for companies to manage partner relationships on every level of cooperation.",
+      description: "Kompleksowa platforma dla firm do zarządzania relacjami partnerskimi na każdym poziomie współpracy.",
       image: "🤝"
     }
   ];
@@ -28,10 +28,10 @@ const CaseStudiesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-4">
           <h3 className="text-lg font-semibold text-muted-foreground mb-8">
-            Our satisfied customers
+            Nasi zadowoleni klienci
           </h3>
           <p className="text-xl text-foreground mb-12">
-            Join digital-first companies that opted for no-code / low-code and accelerated their go-to-market strategy!
+            Dołącz do firm digital-first, które wybrały no-code/low-code i przyspieszyły swoją strategię wejścia na rynek!
           </p>
         </div>
 
@@ -52,7 +52,7 @@ const CaseStudiesSection = () => {
             size="lg"
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
           >
-            READ MORE SUCCESS STORIES →
+            PRZECZYTAJ WIĘCEJ HISTORII SUKCESU →
           </Button>
         </div>
 
@@ -60,17 +60,17 @@ const CaseStudiesSection = () => {
         <div className="mt-20 text-center">
           <div className="bg-gradient-secondary text-white p-12 rounded-lg">
             <h2 className="text-5xl font-bold mb-4">
-              <span className="block">We deliver 40%</span>
-              <span className="block text-3xl">more business value.</span>
+              <span className="block">Dostarczamy o 40%</span>
+              <span className="block text-3xl">większą wartość biznesową.</span>
             </h2>
-            <p className="text-xl mb-2">Built differently.</p>
-            <p className="text-lg mb-8">Delivered better.</p>
+            <p className="text-xl mb-2">Tworzone inaczej.</p>
+            <p className="text-lg mb-8">Dostarczane lepiej.</p>
             <Button 
               size="lg" 
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-primary"
             >
-              CONTACT US
+              SKONTAKTUJ SIĘ Z NAMI
             </Button>
           </div>
         </div>

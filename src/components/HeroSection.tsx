@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroCheetah from "@/assets/hero-cheetah.png";
+import heroF35 from "@/assets/hero-f35.png";
 
 const HeroSection = () => {
   return (
@@ -8,31 +8,32 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="text-foreground">We develop custom </span>
-              <span className="text-primary italic">software</span>
-              <span className="text-foreground"> for businesses </span>
-              <span className="text-primary italic">faster</span>
-              <span className="text-foreground"> and </span>
-              <span className="text-primary italic">more efficiently</span>
+              <span className="text-foreground">Tworzymy </span>
+              <span className="text-primary italic">dedykowane</span>
+              <span className="text-foreground"> rozwiązania dla firm </span>
+              <span className="text-primary italic">szybciej</span>
+              <span className="text-foreground"> i </span>
+              <span className="text-primary italic">efektywniej</span>
             </h1>
             
             <p className="text-lg text-muted-foreground max-w-2xl">
-              By selecting the right technology for each project, we develop digital products up to 40% faster. 
-              Our custom solutions and automations combine custom development with AI and No-Code / Low-Code.
+              Dzięki dobieraniu odpowiednich technologii do każdego projektu, realizujemy produkty cyfrowe 
+              do 40% szybciej. Nasze rozwiązania łączą rozwój na miarę z AI oraz platformami No-Code/Low-Code, 
+              obejmując również strony internetowe i sklepy online.
             </p>
             
             <Button 
               size="lg" 
               className="bg-primary text-primary-foreground hover:bg-primary-variant shadow-blue px-8 py-4 text-lg font-semibold"
             >
-              LET'S TALK
+              ROZPOCZNIJMY ROZMOWĘ
             </Button>
           </div>
           
           <div className="flex justify-center lg:justify-end">
             <img 
-              src={heroCheetah} 
-              alt="Fast AI Development" 
+              src={heroF35} 
+              alt="Szybki rozwój z AI" 
               className="w-full max-w-lg h-auto"
             />
           </div>
@@ -40,7 +41,25 @@ const HeroSection = () => {
         
         <div className="mt-16 flex flex-col items-center">
           <div className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">
-            GAIN AN EDGE:
+            ZDOBĄDŹ PRZEWAGĘ:
+          </div>
+          <div className="grid md:grid-cols-4 gap-8 max-w-4xl">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-2">40%</div>
+              <p className="text-sm text-muted-foreground">Szybsze wdrożenie</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-2">AI</div>
+              <p className="text-sm text-muted-foreground">Zaawansowana automatyzacja</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-2">24/7</div>
+              <p className="text-sm text-muted-foreground">Ciągła dostępność</p>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-2">No-Code</div>
+              <p className="text-sm text-muted-foreground">Szybkie prototypowanie</p>
+            </div>
           </div>
         </div>
       </div>

@@ -3,19 +3,19 @@ import { Card } from "@/components/ui/card";
 const ReviewsSection = () => {
   const reviews = [
     {
-      quote: "They have extremely high-quality work for the price point they are offering.",
+      quote: "Oferują wyjątkowo wysoką jakość pracy w stosunku do ceny, którą proponują.",
       author: "Christopher Sioco",
       position: "Co-Founder, TaxRobot",
       rating: 5
     },
     {
-      quote: "They were able to provide high-quality services and maintain consistent and transparent project management.",
+      quote: "Potrafili zapewnić wysokiej jakości usługi oraz utrzymać spójne i transparentne zarządzanie projektem.",
       author: "Marcin Krużewski",
       position: "Product Owner, Real Estate",
       rating: 5
     },
     {
-      quote: "The cooperation between us and SpeedCode was smooth and flawless.",
+      quote: "Współpraca między nami a SpeedCode przebiegała płynnie i bezbłędnie.",
       author: "Randy Padar",
       position: "CEO, Finbay",
       rating: 5
@@ -27,7 +27,7 @@ const ReviewsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-8 text-foreground">
-            We treat our clients as partners
+            Traktujemy naszych klientów jak partnerów
           </h2>
           
           <div className="bg-card p-8 rounded-lg shadow-subtle inline-block mb-12">
@@ -40,7 +40,7 @@ const ReviewsSection = () => {
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
-              Based on 24 Clutch reviews
+              Na podstawie 24 recenzji na Clutch
             </p>
           </div>
         </div>

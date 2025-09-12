@@ -6,19 +6,19 @@ import { Checkbox } from "@/components/ui/checkbox";
 
 const ContactSection = () => {
   const challenges = [
-    "Development",
+    "Rozwój aplikacji",
     "UX/UI",
-    "QA",
-    "Integrations",
-    "AI Solutions",
-    "Consultancy"
+    "Zapewnienie jakości",
+    "Integracje",
+    "Rozwiązania AI",
+    "Konsultacje"
   ];
 
   const budgets = [
-    "$10,000 and less",
-    "$11,000 - $25,000", 
-    "$26,000 - $50,000",
-    "More than $50,000"
+    "10 000$ i mniej",
+    "11 000$ - 25 000$", 
+    "26 000$ - 50 000$",
+    "Powyżej 50 000$"
   ];
 
   return (
@@ -29,13 +29,13 @@ const ContactSection = () => {
           <div>
             <div className="mb-12">
               <h2 className="text-5xl font-bold mb-4 text-foreground">
-                Hey!
+                Cześć!
               </h2>
               <p className="text-xl text-foreground mb-6">
-                I'd love to hear about your project!
+                Chciałbym usłyszeć o Twoim projekcie!
               </p>
               <p className="text-muted-foreground mb-8">
-                We will answer your message within 24 hours. Yes, it's THAT easy!
+                Odpowiemy na Twoją wiadomość w ciągu 24 godzin. Tak, to TAKIE proste!
               </p>
             </div>
 
@@ -46,7 +46,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-foreground">Emil Bednarczyk</h3>
-                  <p className="text-muted-foreground">Client Partner / SpeedCode.io</p>
+                  <p className="text-muted-foreground">Partner Kliencki / SpeedCode.io</p>
                   <p className="text-primary font-semibold">M: +48 792 015 688</p>
                 </div>
               </div>
@@ -59,7 +59,7 @@ const ContactSection = () => {
               {/* Step 1 */}
               <div>
                 <h3 className="font-bold text-foreground mb-4">
-                  1. What are your main challenges that we can help you with?
+                  1. Jakie są Twoje główne wyzwania, z którymi możemy Ci pomóc?
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
                   {challenges.map((challenge, index) => (
@@ -79,10 +79,10 @@ const ContactSection = () => {
               {/* Step 2 */}
               <div>
                 <h3 className="font-bold text-foreground mb-4">
-                  2. What is your budget?
+                  2. Jaki jest Twój budżet?
                 </h3>
                 <select className="w-full p-3 border border-border rounded-md bg-background text-foreground">
-                  <option>Choose an option</option>
+                  <option>Wybierz opcję</option>
                   {budgets.map((budget, index) => (
                     <option key={index} value={budget}>{budget}</option>
                   ))}
@@ -92,16 +92,16 @@ const ContactSection = () => {
               {/* Step 3 */}
               <div>
                 <h3 className="font-bold text-foreground mb-4">
-                  3. Do you need an NDA?
+                  3. Czy potrzebujesz NDA?
                 </h3>
                 <div className="flex space-x-4">
                   <div className="flex items-center space-x-2">
                     <Checkbox id="nda-no" />
-                    <label htmlFor="nda-no" className="font-bold cursor-pointer">NO</label>
+                    <label htmlFor="nda-no" className="font-bold cursor-pointer">NIE</label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Checkbox id="nda-yes" />
-                    <label htmlFor="nda-yes" className="font-bold cursor-pointer">YES</label>
+                    <label htmlFor="nda-yes" className="font-bold cursor-pointer">TAK</label>
                   </div>
                 </div>
               </div>
@@ -109,17 +109,17 @@ const ContactSection = () => {
               {/* Step 4 */}
               <div>
                 <h3 className="font-bold text-foreground mb-4">
-                  4. Fill in the details.
+                  4. Uzupełnij szczegóły.
                 </h3>
                 <div className="space-y-4">
                   <div className="grid md:grid-cols-2 gap-4">
-                    <Input placeholder="First Name" />
-                    <Input placeholder="Last Name" />
+                    <Input placeholder="Imię" />
+                    <Input placeholder="Nazwisko" />
                   </div>
                   <Input placeholder="Email" type="email" />
-                  <Input placeholder="Phone" type="tel" />
-                  <Input placeholder="Company" />
-                  <Textarea placeholder="Tell us about your project..." rows={4} />
+                  <Input placeholder="Telefon" type="tel" />
+                  <Input placeholder="Firma" />
+                  <Textarea placeholder="Opowiedz nam o swoim projekcie..." rows={4} />
                 </div>
               </div>
 
@@ -128,13 +128,13 @@ const ContactSection = () => {
                 <div className="flex items-start space-x-2">
                   <Checkbox id="consent1" className="mt-1" />
                   <label htmlFor="consent1" className="text-sm text-muted-foreground cursor-pointer">
-                    I consent to the processing of my personal data by SpeedCode sp. z o.o. and I declare that the provision of my personal data is voluntary and that I have been informed about the right to request access to my personal data, change it and delete it.
+                    Wyrażam zgodę na przetwarzanie moich danych osobowych przez SpeedCode sp. z o.o. i oświadczam, że podanie moich danych osobowych jest dobrowolne oraz że zostałem poinformowany o prawie żądania dostępu do moich danych osobowych, ich zmiany i usunięcia.
                   </label>
                 </div>
                 <div className="flex items-start space-x-2">
                   <Checkbox id="consent2" className="mt-1" />
                   <label htmlFor="consent2" className="text-sm text-muted-foreground cursor-pointer">
-                    I consent to the processing of my personal data by SpeedCode sp. z o.o. for marketing purposes. Expressing consent is voluntary. You have the right to withdraw your consent at any time without affecting the lawfulness of processing based on consent before its withdrawal.
+                    Wyrażam zgodę na przetwarzanie moich danych osobowych przez SpeedCode sp. z o.o. w celach marketingowych. Wyrażenie zgody jest dobrowolne. Masz prawo do wycofania zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania na podstawie zgody przed jej wycofaniem.
                   </label>
                 </div>
               </div>
@@ -144,7 +144,7 @@ const ContactSection = () => {
                 size="lg" 
                 className="w-full bg-primary text-primary-foreground hover:bg-primary-variant"
               >
-                Send Message
+                Wyślij Wiadomość
               </Button>
             </form>
           </Card>
