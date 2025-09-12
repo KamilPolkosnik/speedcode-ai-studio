@@ -47,7 +47,7 @@ const HeroSection = () => {
           <div className="text-5xl font-bold uppercase tracking-wider mb-4 pb-5">
             ZDOBĄDŹ PRZEWAGĘ:
           </div>
-          <div className="grid md:grid-cols-4 gap-8 max-w-4xl">
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl">
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">40%</div>
               <p className="text-sm text-muted-foreground">Szybsze i tańsze wdrożenie</p>
