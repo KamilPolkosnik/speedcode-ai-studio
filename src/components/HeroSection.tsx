@@ -44,7 +44,7 @@ const HeroSection = () => {
         </div>
         
         <div className="mt-16 flex flex-col items-center">
-          <div className="text-5xl font-semibold text-sm uppercase tracking-wider mb-4">
+          <div className="text-5xl font-bold uppercase tracking-wider mb-4">
             ZDOBĄDŹ PRZEWAGĘ:
           </div>
           <div className="grid md:grid-cols-4 gap-8 max-w-4xl">
