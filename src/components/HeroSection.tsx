@@ -22,7 +22,7 @@ const HeroSection = () => {
             </p>
 
                         <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="text-foreground">Oprogramowania, aplikacje, strony i sklepy internetowe, </span>
+              <span className="text-foreground">Oprogramowanie, aplikacje, strony i sklepy internetowe, </span>
                                         <span className="text-primary italic">rozwiązania szyte na miarę.</span>
             </h1>
             
