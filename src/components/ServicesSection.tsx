@@ -39,7 +39,7 @@ const ServicesSection = () => {
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
             W SpeedCode zawsze wybieramy najefektywniejszą ścieżkę technologiczną, aby dostarczać skalowalne, 
             bezpieczne i wysokowydajne rozwiązania — od MVP i narzędzi szytych na miarę po zaawansowane aplikacje 
-            i złożone systemy. To podejście zapewnia naszym klientom co najmniej <span className="text-primary italic"> 40% szybszą efektywność przy równoczesnym zmniejszeniu kosztów.</span>
+            i złożone systemy. To podejście zapewnia naszym klientom co najmniej <span className="text-primary italic font-bold"> 40% szybszą efektywność przy równoczesnym zmniejszeniu kosztów.</span>
           </p>
         </div>
 
