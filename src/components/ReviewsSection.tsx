@@ -3,21 +3,21 @@ import { Card } from "@/components/ui/card";
 const ReviewsSection = () => {
   const reviews = [
     {
-      quote: "Oferują wyjątkowo wysoką jakość pracy w stosunku do ceny, którą proponują.",
-      author: "Christopher Sioco",
-      position: "Co-Founder, TaxRobot",
+      quote: "Wysoka jakość, bardzo szybki czas wykonania.",
+      author: "Kamil P.",
+      position: "Właściciel, Virentia Luxuria",
       rating: 5
     },
     {
-      quote: "Potrafili zapewnić wysokiej jakości usługi oraz utrzymać spójne i transparentne zarządzanie projektem.",
-      author: "Marcin Krużewski",
-      position: "Product Owner, Real Estate",
+      quote: "Doskonałe zarządzanie projektem, ciekawe propozycje i bardzo szybkie wdrożenie.",
+      author: "Aureliusz S.",
+      position: "CEO, Bookfinanse",
       rating: 5
     },
     {
-      quote: "Współpraca między nami a SpeedCode przebiegała płynnie i bezbłędnie.",
-      author: "Randy Padar",
-      position: "CEO, Finbay",
+      quote: "Współpraca ze SpeedCode to czysta przyjemność.",
+      author: "Łukasz Z.",
+      position: "Manager, Zetgrid",
       rating: 5
     }
   ];
