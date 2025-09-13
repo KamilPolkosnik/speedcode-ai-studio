@@ -57,7 +57,7 @@ const ProcessSection = () => {
             Innowacja, która napędza efektywność rozwoju
           </h2>
           <p className="text-lg text-muted-foreground text-center mb-12 max-w-4xl mx-auto">
-            Łączenie rozwoju na miarę z AI oraz No-Code/Low-Code odblokowuje najwyższy poziom optymalizacji 
+            Połączenie AI oraz technologii No-Code/Low-Code odblokowuje najwyższy poziom optymalizacji 
             rozwoju — oszczędzając czas, budżet i zasoby w budowaniu produktów cyfrowych.
           </p>
 
