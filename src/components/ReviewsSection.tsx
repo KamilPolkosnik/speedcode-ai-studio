@@ -30,6 +30,7 @@ const ReviewsSection = () => {
             Traktujemy naszych klientów jak partnerów
           </h2>
           
+
         <div className="grid md:grid-cols-3 gap-8">
           {reviews.map((review, index) => (
             <Card key={index} className="p-8 text-center hover:shadow-blue transition-shadow">
