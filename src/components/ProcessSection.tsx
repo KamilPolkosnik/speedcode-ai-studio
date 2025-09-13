@@ -33,17 +33,17 @@ const ProcessSection = () => {
   const processSteps = [
     {
       title: "ZAKRES",
-      description: "Łączymy Twoje pomysły i potrzeby oraz nasze sugestie w propozycję rozwiązania. Definiujemu cele i skupiamy się na kluczowych funkcjach potrzebnych do stworzenia produktu.",
+      description: "Łączymy Twoje pomysły i potrzeby oraz nasze sugestie. Definiujemu cele i skupiamy się na kluczowych funkcjach potrzebnych do rozwoju. Pierwszym krokiem jest przekształcenie idei w produkt.",
       icon: "🎯"
     },
     {
       title: "DESIGN",
-      description: "Uzgadniamy zakres prac, przygotowujemy makiety wraz z prototypowaniem, aby potwierdzić, że wszyscy rozumiemy potencjalne ścieżki klientów. Proces kończy się, gdy obie strony upewnią się, że użytkownicy dostaną możliwie najlepsze rozwiązania, a Ty, dzięki temu rozwiniesz swoją firmę.",
+      description: "Uzgadniamy zakres prac, przygotowujemy makiety wraz z prototypem, aby potwierdzić, że wszyscy rozumiemy potencjalne ścieżki klientów. Kończymy proces, kiedy upewnimy się, że użytkownik oprogramowania dostanie jak najlepsze rozwiązanie, a Twoja firma dzięki temu zarobi.",
       icon: "🎨"
     },
     {
       title: "ROZWÓJ",
-      description: "Budujemy Twoje oprogramowanie, używając platform no-code/low-code oraz AI, które uznaliśmy za najlepszy możliwy wybór. Jesteś informowany o wszystkich krokach, które podejmujemy. Gwarantujemy ustalony harmonogram.",
+      description: "Budujemy Twoje oprogramowanie, używając platform no-code/low-code oraz AI, które uznaliśmy za najlepszy możliwy wybór. Jesteś informowany o wszystkich krokach, które podejmujemy.",
       icon: "⚡"
     }
   ];
