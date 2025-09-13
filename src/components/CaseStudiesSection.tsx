@@ -4,24 +4,18 @@ import { Button } from "@/components/ui/button";
 const CaseStudiesSection = () => {
   const caseStudies = [
     {
-      category: "CRM",
-      title: "Virentia Luxuria",
-      description: "Nowoczesny CRM do zarządzania magazynem oraz sprzedażą. zbudowany za pomocą narzędzi no-code.",
+      category: "IT",
+      title: "DS STREAM",
+      description: "Nowoczesna strona internetowa zbudowana w Webflow dla firmy IT — z naciskiem na redesign i wydajne zarządzanie treścią.",
       image: "🖥️"
     },
     {
-      category: "E-commerce",
-      title: "Sklep Virentia Luxuria",
-      description: "Sklep internetowy Virentia Luxuria - tradycyjny design, skorelowany z produktami ziołowymi.",
-      image: "🍀"
+      category: "Pet-Tech",
+      title: "Psinder",
+      description: "Aplikacja mobilna rewolucjonizująca proces adopcji psów w Polsce poprzez płynne łączenie schronisk, organizacji ratunkowych i przyszłych właścicieli w jednej scentralizowanej platformie.",
+      image: "🐕"
     },
     {
-      category: "CRM",
-      title: "Bookfinanse",
-      description: "Kompleksowe oprogramowanie do obsługi zadań i zarządzania klientem.",
-      image: "🤝"
-    },
-        {
       category: "IT",
       title: "Partnerplace",
       description: "Kompleksowa platforma dla firm do zarządzania relacjami partnerskimi na każdym poziomie współpracy.",
@@ -52,6 +46,15 @@ const CaseStudiesSection = () => {
           ))}
         </div>
 
+        <div className="text-center">
+          <Button 
+            variant="outline" 
+            size="lg"
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+          >
+            PRZECZYTAJ WIĘCEJ HISTORII SUKCESU →
+          </Button>
+        </div>
 
         {/* Value Proposition */}
         <div className="mt-20 text-center">
@@ -61,11 +64,11 @@ const CaseStudiesSection = () => {
               <span className="block">40% szybciej i taniej.</span>
             </h2>
             <p className="text-xl mb-2">Tworzone szybciej.</p>
-            <p className="text-lg mb-8">Do tego lepiej.</p>
+            <p className="text-lg mb-8">taniej i lepiej.</p>
             <Button 
               size="lg" 
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-primary"
+              className="border-white text-white bg-text-primary hover:bg-white hover:text-primary"
             >
               SKONTAKTUJ SIĘ Z NAMI
             </Button>
