@@ -29,7 +29,7 @@ const ReviewsSection = () => {
           <h2 className="text-4xl font-bold mb-8 text-foreground">
             Traktujemy naszych klientów jak partnerów
           </h2>
-          
+        </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {reviews.map((review, index) => (
