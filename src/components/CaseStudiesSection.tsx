@@ -33,7 +33,7 @@ const CaseStudiesSection = () => {
     <section className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="text-center mb-4">
-          <h2 className="text-4xl font-bold text-muted-foreground mb-8">
+          <h2 className="text-4xl font-bold text-foreground mb-8">
             Nasi zadowoleni klienci
           </h2>
           <p className="text-xl text-foreground mb-12">
