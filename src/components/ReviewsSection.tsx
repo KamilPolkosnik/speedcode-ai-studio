@@ -30,21 +30,6 @@ const ReviewsSection = () => {
             Traktujemy naszych klientów jak partnerów
           </h2>
           
-          <div className="bg-card p-8 rounded-lg shadow-subtle inline-block mb-12">
-            <div className="flex items-center justify-center mb-4">
-              <div className="text-4xl font-bold text-primary mr-2">5.0</div>
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-xl">★</span>
-                ))}
-              </div>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              Na podstawie 24 recenzji na Clutch
-            </p>
-          </div>
-        </div>
-
         <div className="grid md:grid-cols-3 gap-8">
           {reviews.map((review, index) => (
             <Card key={index} className="p-8 text-center hover:shadow-blue transition-shadow">
