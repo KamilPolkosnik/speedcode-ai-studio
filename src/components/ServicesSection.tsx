@@ -32,7 +32,9 @@ const ServicesSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">
             <span className="text-primary italic">Innowacyjne</span>
-            <span className="text-foreground"> technologie, rzeczywisty wpływ na biznes</span>
+            <span className="text-foreground"> technologie,</span>
+            <span className="text-primary italic"> szybszy</span>
+            <span className="text-foreground"> start Twojego biznesu</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
             W SpeedCode zawsze wybieramy najefektywniejszą ścieżkę technologiczną, aby dostarczać skalowalne, 
