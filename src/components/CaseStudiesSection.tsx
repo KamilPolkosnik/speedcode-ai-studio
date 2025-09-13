@@ -60,7 +60,7 @@ const CaseStudiesSection = () => {
               <span className="block text-2xl">40% szybciej i taniej.</span>
             </h2>
             <p className="text-xl mb-2">Tworzone szybciej.</p>
-            <p className="text-xl mb-8">taniej, lepiej i skuteczniej.</p>
+            <p className="text-xl mb-8">Taniej, lepiej i skuteczniej.</p>
             <Button 
               size="lg" 
               variant="outline"
