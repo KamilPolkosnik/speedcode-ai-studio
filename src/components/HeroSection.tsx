@@ -50,15 +50,15 @@ const HeroSection = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl">
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">40%</div>
-              <p className="text-sm text-muted-foreground">Szybsze i tańsze wdrożenie</p>
+              <p className="text-m text-muted-foreground">Szybsze i tańsze wdrożenie</p>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">AI</div>
-              <p className="text-sm text-muted-foreground">Skuteczność dzięki najnowszej technologii</p>
+              <p className="text-m text-muted-foreground">Skuteczność dzięki najnowszej technologii</p>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-              <p className="text-sm text-muted-foreground">Ciągła dostępność</p>
+              <p className="text-m text-muted-foreground">Ciągła dostępność</p>
             </div>
           </div>
         </div>
