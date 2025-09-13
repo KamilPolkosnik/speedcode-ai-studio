@@ -27,11 +27,11 @@ const CaseStudiesSection = () => {
     <section className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="text-center mb-4">
-          <h2 className="text-4xl font-bold mb-6">
+          <h3 className="text-lg font-semibold text-muted-foreground mb-8">
             Nasi zadowoleni klienci
-          </h2>
+          </h3>
           <p className="text-xl text-foreground mb-12">
-            Dołącz do firm digital-first, które wybrały no-code/low-code i przyspieszyły swoją strategię wejścia na rynek!
+            Dołącz do firm digital-first, które wybrały <span className="text-foreground font-bold">SpeedCode</span> i przyspieszyły swoją strategię wejścia na rynek!
           </p>
         </div>
 
