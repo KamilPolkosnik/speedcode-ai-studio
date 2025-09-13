@@ -4,15 +4,15 @@ const ProcessSection = () => {
       title: "PODEJŚCIE INNOWACYJNE",
       color: "bg-primary",
       items: [
-        { task: "Analiza wymagań i projektowanie", hours: "75 h" },
-        { task: "Design UX/UI", hours: "125 h" },
+        { task: "Analiza wymagań i projektowanie", hours: "50 h" },
+        { task: "Design UX/UI", hours: "100 h" },
         { task: "Implementacja projektu (frontend & backend)", hours: "350 h" },
-        { task: "Wdrożenie i testowanie", hours: "125 h" },
+        { task: "Wdrożenie i testowanie", hours: "100 h" },
         { task: "Integracja z zewnętrznymi narzędziami", hours: "50 h" },
-        { task: "Zarządzanie projektem i koszty komunikacji", hours: "125 h" }
+        { task: "Zarządzanie projektem i koszty komunikacji", hours: "100 h" }
       ],
-      total: "850 h",
-      rate: "$50 - $99"
+      total: "750 h",
+      rate: "250 - 399zł"
     },
     {
       title: "PODEJŚCIE TRADYCYJNE",
@@ -26,24 +26,24 @@ const ProcessSection = () => {
         { task: "Zarządzanie projektem i koszty komunikacji", hours: "125 h" }
       ],
       total: "1375 h",
-      rate: "$50 - $99"
+      rate: "250 - 399zł"
     }
   ];
 
   const processSteps = [
     {
       title: "ZAKRES",
-      description: "Łączymy Twoje pomysły i potrzeby w pierwszy szkic rozwiązania. Definiujemu cele i skupiamy się na kluczowych funkcjach potrzebnych do rozwoju. Pierwszym krokiem jest przekształcenie idei w produkt.",
+      description: "Łączymy Twoje pomysły i potrzeby oraz nasze sugestie w propozycję rozwiązania. Definiujemu cele i skupiamy się na kluczowych funkcjach potrzebnych do stworzenia produktu.",
       icon: "🎯"
     },
     {
       title: "DESIGN",
-      description: "Uzgadniasz zakres prac, a my przygotowujemy makiety wraz z prototypowaniem, aby potwierdzić, że wszyscy rozumiemy potencjalne ścieżki klientów. Proces kończy się, gdy obie strony upewnią się, że użytkownicy mają najlepsze możliwe doświadczenie.",
+      description: "Uzgadniamy zakres prac, przygotowujemy makiety wraz z prototypowaniem, aby potwierdzić, że wszyscy rozumiemy potencjalne ścieżki klientów. Proces kończy się, gdy obie strony upewnią się, że użytkownicy dostaną możliwie najlepsze rozwiązania, a Ty, dzięki temu rozwiniesz swoją firmę.",
       icon: "🎨"
     },
     {
       title: "ROZWÓJ",
-      description: "Budujemy Twoje rozwiązanie w tygodniowych sprintach, używając platform no-code/low-code oraz AI, które uznaliśmy za najlepszy możliwy wybór. Jesteś informowany o wszystkich krokach, które podejmujemy. Gwarantujemy ustalony harmonogram.",
+      description: "Budujemy Twoje oprogramowanie, używając platform no-code/low-code oraz AI, które uznaliśmy za najlepszy możliwy wybór. Jesteś informowany o wszystkich krokach, które podejmujemy. Gwarantujemy ustalony harmonogram.",
       icon: "⚡"
     }
   ];
@@ -57,7 +57,7 @@ const ProcessSection = () => {
             Innowacja, która napędza efektywność rozwoju
           </h2>
           <p className="text-lg text-muted-foreground text-center mb-12 max-w-4xl mx-auto">
-            Połączenie AI oraz technologii No-Code/Low-Code odblokowuje najwyższy poziom optymalizacji 
+            Łączenie rozwoju na miarę z AI oraz No-Code/Low-Code odblokowuje najwyższy poziom optymalizacji 
             rozwoju — oszczędzając czas, budżet i zasoby w budowaniu produktów cyfrowych.
           </p>
 
