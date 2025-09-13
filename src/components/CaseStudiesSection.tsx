@@ -27,7 +27,7 @@ const CaseStudiesSection = () => {
     <section className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="text-center mb-4">
-          <h3 className="text-lg font-semibold text-muted-foreground mb-8">
+          <h3 className="text-2xl font-semibold text-muted-foreground mb-8">
             Nasi zadowoleni klienci
           </h3>
           <p className="text-xl text-foreground mb-12">
