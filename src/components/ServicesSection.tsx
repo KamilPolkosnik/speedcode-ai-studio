@@ -11,7 +11,7 @@ const ServicesSection = () => {
     {
       icon: "💻",
       title: "Platformy Webowe",
-      description: "Strony internetowe, sklepy online, systemy rezerwacji, platformy e-learningowe i rozwiązania job board."
+      description: "Strony internetowe, sklepy online, CRM'y, systemy rezerwacji, platformy e-learningowe i rozwiązania job board."
     },
     {
       icon: "📱",
@@ -50,8 +50,8 @@ const ServicesSection = () => {
             <span className="text-primary italic">– szybciej, kompleksowo, bez kompromisów</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto mb-12">
-            Wykorzystując zaawansowane technologie AI, No-Code/Low-Code, pomagamy Ci efektywnie 
-            przekształcać pomysły w funkcjonalne produkty cyfrowe, narzędzia szyte na miarę, strony internetowe, 
+            Wykorzystując zaawansowane technologie jak AI i No-Code/Low-Code, pomagamy każdej firmie efektywnie 
+            przekształcać pomysły w w pełni funkcjonalne usługi AI, narzędzia na miarę, strony internetowe, 
             sklepy online oraz aplikacje mobilne. Poznaj pełną gamę naszych usług:
           </p>
         </div>
