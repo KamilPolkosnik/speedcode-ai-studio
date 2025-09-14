@@ -55,7 +55,7 @@ const ContactSection = () => {
 
           {/* Contact Form */}
           <Card className="p-8">
-            <form className="space-y-8">
+            <form className="space-y-8" method="POST" action="/api/contact">
               {/* Step 1 */}
               <div>
                 <h3 className="font-bold text-foreground mb-4">
@@ -64,8 +64,14 @@ const ContactSection = () => {
                 <div className="grid grid-cols-2 gap-3">
                   {challenges.map((challenge, index) => (
                     <div key={index} className="flex items-center space-x-2">
-                      <Checkbox id={`challenge-${index}`} />
-                      <label 
+                      <input
+                        type="checkbox"
+                        id={`challenge-${index}`}
+                        name="challenges"
+                        value={challenge}
+                        className="h-4 w-4 border-border rounded"
+                      />
+                      <label
                         htmlFor={`challenge-${index}`}
                         className="text-sm text-foreground cursor-pointer"
                       >
@@ -81,7 +87,7 @@ const ContactSection = () => {
                 <h3 className="font-bold text-foreground mb-4">
                   2. Jaki jest Twój budżet?
                 </h3>
-                <select className="w-full p-3 border border-border rounded-md bg-background text-foreground">
+                <select name="budget" className="w-full p-3 border border-border rounded-md bg-background text-foreground">
                   <option>Wybierz opcję</option>
                   {budgets.map((budget, index) => (
                     <option key={index} value={budget}>{budget}</option>
@@ -96,11 +102,11 @@ const ContactSection = () => {
                 </h3>
                 <div className="flex space-x-4">
                   <div className="flex items-center space-x-2">
-                    <Checkbox id="nda-no" />
+                    <input type="radio" id="nda-no" name="nda" value="no" className="h-4 w-4" />
                     <label htmlFor="nda-no" className="font-bold cursor-pointer">NIE</label>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Checkbox id="nda-yes" />
+                    <input type="radio" id="nda-yes" name="nda" value="yes" className="h-4 w-4" />
                     <label htmlFor="nda-yes" className="font-bold cursor-pointer">TAK</label>
                   </div>
                 </div>
@@ -113,26 +119,26 @@ const ContactSection = () => {
                 </h3>
                 <div className="space-y-4">
                   <div className="grid md:grid-cols-2 gap-4">
-                    <Input placeholder="Imię" />
-                    <Input placeholder="Nazwisko" />
+                    <Input name="firstName" placeholder="Imię" />
+                    <Input name="lastName" placeholder="Nazwisko" />
                   </div>
-                  <Input placeholder="Email" type="email" />
-                  <Input placeholder="Telefon" type="tel" />
-                  <Input placeholder="Firma" />
-                  <Textarea placeholder="Opowiedz nam o swoim projekcie..." rows={4} />
+                  <Input name="email" placeholder="Email" type="email" />
+                  <Input name="phone" placeholder="Telefon" type="tel" />
+                  <Input name="company" placeholder="Firma" />
+                  <Textarea name="message" placeholder="Opowiedz nam o swoim projekcie..." rows={4} />
                 </div>
               </div>
 
               {/* Consent */}
               <div className="space-y-4">
                 <div className="flex items-start space-x-2">
-                  <Checkbox id="consent1" className="mt-1" />
+                  <input type="checkbox" id="consent1" name="consent1" value="yes" className="mt-1 h-4 w-4" />
                   <label htmlFor="consent1" className="text-sm text-muted-foreground cursor-pointer">
                     Wyrażam zgodę na przetwarzanie moich danych osobowych przez SpeedCode sp. z o.o. i oświadczam, że podanie moich danych osobowych jest dobrowolne oraz że zostałem poinformowany o prawie żądania dostępu do moich danych osobowych, ich zmiany i usunięcia.
                   </label>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <Checkbox id="consent2" className="mt-1" />
+                  <input type="checkbox" id="consent2" name="consent2" value="yes" className="mt-1 h-4 w-4" />
                   <label htmlFor="consent2" className="text-sm text-muted-foreground cursor-pointer">
                     Wyrażam zgodę na przetwarzanie moich danych osobowych przez SpeedCode sp. z o.o. w celach marketingowych. Wyrażenie zgody jest dobrowolne. Masz prawo do wycofania zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania na podstawie zgody przed jej wycofaniem.
                   </label>
