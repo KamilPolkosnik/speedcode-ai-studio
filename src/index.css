@@ -241,4 +241,5 @@ html {
   z-index: -1; /* behind all content */
   background: #0a0f14; /* deep navy */
   pointer-events: none;
+  opacity: 0.2; /* zmniejsz intensywność efektu */
 }
