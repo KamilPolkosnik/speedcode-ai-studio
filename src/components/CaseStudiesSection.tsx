@@ -144,7 +144,7 @@ const CaseStudiesSection = () => {
             <button
               key={cat}
               onClick={() => setActiveCat(cat)}
-              className={`px-4 py-2 rounded-lg border transition ${
+              className={`px-4 py-2 rounded-full border transition ${
                 activeCat === cat
                   ? "bg-primary text-primary-foreground border-primary"
                   : "bg-background text-foreground border-border hover:bg-accent hover:text-accent-foreground"

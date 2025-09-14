@@ -9,32 +9,34 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
               <span className="text-foreground">Tworzymy </span>
-              <span className="text-primary italic">dedykowane</span>
-              <span className="text-foreground"> rozwiązania dla Twojej firmy </span>
-              <span className="text-primary italic">szybciej</span>
-              <span className="text-foreground"> i </span>
+              <span className="text-primary italic">nowoczesne</span>{" "}
+              <span className="text-foreground">rozwiązania cyfrowe dla Twojej firmy — </span>
+              <span className="text-primary italic">szybciej</span>{" "}
+              <span className="text-foreground">i </span>
               <span className="text-primary italic">efektywniej</span>
             </h1>
             
             <p className="text-lg text-muted-foreground max-w-2xl">
-              Dzięki dobieraniu odpowiednich technologii do każdego projektu, realizujemy produkty cyfrowe 
-              <span className="font-bold"> do 40% szybciej i taniej.</span> Nasze rozwiązania obejmują stosowanie najnowszych technologii AI, w połączeniu z narzędziami no-code i low-code.
+              Dobieramy technologię do Twoich potrzeb, aby dostarczać produkty cyfrowe{" "}
+              <span className="font-bold">nawet 40% szybciej i taniej.</span> Łączymy najnowsze osiągnięcia AI z praktycznymi narzędziami no‑code i low‑code.
             </p>
 
-                        <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="text-foreground">Oprogramowanie, aplikacje, strony i sklepy internetowe, </span>
-                                        <span className="text-primary italic">rozwiązania szyte na miarę.</span>
-            </h1>
+                        <h2 className="text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
+              <span className="text-foreground">Aplikacje, strony i sklepy internetowe — </span>
+                                        <span className="text-primary italic">szyte na miarę</span>
+            </h2>
             
-            <Button 
-              type="button"
-              size="lg"
-              className="ai-bounce inline-flex items-center justify-center h-14 md:h-16 px-10 leading-none text-center bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[28px] uppercase tracking-wide border-0 shadow-[0_20px_60px_-10px_rgba(47,107,255,0.45)]"
-            >
-              ROZPOCZNIJMY ROZMOWĘ
-            </Button>
+            <div className="flex justify-center lg:justify-start">
+              <Button 
+                type="button"
+                size="lg"
+                className="ai-bounce inline-flex items-center justify-center h-14 md:h-16 px-10 leading-none text-center bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[28px] uppercase tracking-wide border-0 shadow-[0_20px_60px_-10px_rgba(47,107,255,0.45)]"
+              >
+                ROZPOCZNIJMY ROZMOWĘ
+              </Button>
+            </div>
           </div>
           
           <div className="flex justify-center lg:justify-end">

@@ -129,7 +129,9 @@ const ProcessSection = () => {
               </div>
             </div>
             <div className="text-center">
-              <div className="text-8xl">🤖</div>
+              <div className="text-8xl inline-block">
+                <span className="inline-block animate-robot-head">🤖</span>
+              </div>
             </div>
           </div>
         </div>

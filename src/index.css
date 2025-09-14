@@ -215,3 +215,21 @@ html {
 @media (prefers-reduced-motion: reduce) {
   .ai-bounce { animation: none; transform: none; }
 }
+
+/* === Robot head rotation animation === */
+@keyframes robotHeadRotate {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(20deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-20deg); }
+  100% { transform: rotate(0deg); }
+}
+.animate-robot-head {
+  display: inline-block;
+  transform-origin: 50% 45%; /* center-ish for emoji glyphs */
+  animation: robotHeadRotate 2.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-robot-head { animation: none; transform: none; }
+}
