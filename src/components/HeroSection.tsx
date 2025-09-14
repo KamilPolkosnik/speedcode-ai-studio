@@ -1,5 +1,7 @@
+import { motion } from "framer-motion";
+import CountUp from "react-countup";
 import { Button } from "@/components/ui/button";
-import heroF35 from "@/assets/hero-f35.png";
+import heroF35 from "@/assets/speedcode.png";
 
 const HeroSection = () => {
   return (
@@ -27,8 +29,9 @@ const HeroSection = () => {
             </h1>
             
             <Button 
-              size="lg" 
-              className="bg-primary text-primary-foreground hover:bg-primary-variant shadow-blue px-8 py-4 text-lg font-semibold"
+              type="button"
+              size="lg"
+              className="ai-bounce inline-flex items-center justify-center h-14 md:h-16 px-10 leading-none text-center bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[28px] uppercase tracking-wide border-0 shadow-[0_20px_60px_-10px_rgba(47,107,255,0.45)]"
             >
               ROZPOCZNIJMY ROZMOWĘ
             </Button>
@@ -49,15 +52,31 @@ const HeroSection = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">40%</div>
+              <div className="text-3xl font-bold text-primary mb-2">
+                <CountUp start={1} end={40} duration={2} suffix="%" enableScrollSpy />
+              </div>
               <p className="text-m text-muted-foreground font-bold">Szybsze i tańsze wdrożenie</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">AI</div>
+              <motion.div
+                className="text-3xl font-bold text-primary mb-2"
+                whileInView={{ scale: [1, 1.3, 0.95, 1.1, 1] }}
+                transition={{ type: "spring", duration: 0.8, bounce: 0.5 }}
+                viewport={{ once: true }}
+              >
+                AI
+              </motion.div>
               <p className="text-m text-muted-foreground font-bold">Skuteczność dzięki najnowszej technologii</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">24/7</div>
+              <motion.div
+                className="text-3xl font-bold text-primary mb-2"
+                whileInView={{ scale: [1, 1.3, 0.95, 1.1, 1] }}
+                transition={{ type: "spring", duration: 0.8, bounce: 0.5 }}
+                viewport={{ once: true }}
+              >
+                24/7
+              </motion.div>
               <p className="text-m text-muted-foreground font-bold">Ciągła dostępność</p>
             </div>
           </div>

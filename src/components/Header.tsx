@@ -1,19 +1,34 @@
 import { Button } from "@/components/ui/button";
 import speedCodeLogo from "@/assets/speedcode-logo.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 
 const Header = () => {
   const [language, setLanguage] = useState("PL");
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
+
+  useEffect(() => {
+    // Ensure dark is default on first render
+    document.documentElement.classList.add("dark");
+    document.documentElement.classList.remove("light");
+  }, []);
 
   const toggleLanguage = () => {
     setLanguage(language === "PL" ? "EN" : "PL");
   };
 
   const toggleTheme = () => {
-    setIsDark(!isDark);
-    document.documentElement.classList.toggle("dark");
+    if (isDark) {
+      // Switch to light
+      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
+      setIsDark(false);
+    } else {
+      // Switch back to dark
+      document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("light");
+      setIsDark(true);
+    }
   };
 
   return (
@@ -42,7 +57,7 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button variant="outline" onClick={toggleTheme} size="sm" className="p-2">
+            <Button variant="outline" onClick={toggleTheme} size="sm" className="p-2" aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}>
               {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>
             <Button variant="outline" onClick={toggleLanguage} className="hidden md:block">

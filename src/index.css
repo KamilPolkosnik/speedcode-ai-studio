@@ -1,3 +1,23 @@
+
+/* === Wave animation for tech badges === */
+@keyframes waveSlide {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-6px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(6px); }
+  100% { transform: translateY(0); }
+}
+.tech-wave span {
+  display: inline-block;
+  animation: waveSlide 2s ease-in-out infinite;
+}
+.tech-wave span:nth-child(1) { animation-delay: 0s; }
+.tech-wave span:nth-child(2) { animation-delay: 0.1s; }
+.tech-wave span:nth-child(3) { animation-delay: 0.2s; }
+.tech-wave span:nth-child(4) { animation-delay: 0.3s; }
+.tech-wave span:nth-child(5) { animation-delay: 0.4s; }
+.tech-wave span:nth-child(6) { animation-delay: 0.5s; }
+.tech-wave span:nth-child(7) { animation-delay: 0.6s; }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,7 +25,7 @@
 /* SpeedCode Design System - White-Blue Gradient Theme */
 
 @layer base {
-  :root {
+  .light {
     --background: 0 0% 100%;
     --foreground: 220 45% 15%;
 
@@ -125,4 +145,73 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+html {
+  @apply dark;
+}
+
+/* === AI Coding SVG Animations === */
+
+/* Colors synced with Tailwind CSS variables */
+:root, .light, .dark {
+  --ai-stroke: hsl(var(--brand-blue));
+  --ai-stroke-dim: hsl(var(--brand-blue) / 0.5);
+  --ai-text: hsl(var(--brand-blue));
+  --ai-window-bg: hsl(var(--sidebar-background));
+  --ai-window-stroke: hsl(var(--border));
+}
+
+/* Typography inside SVG */
+.ai-binary { font: 700 28px/1.1 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu; fill: var(--ai-text); opacity: .7; letter-spacing: 2px; }
+.ai-title-big { font: 900 120px/1 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu; fill: var(--ai-text); }
+.ai-title-sub { font: 800 70px/1 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu; fill: var(--ai-text); letter-spacing: 4px; }
+
+/* Head & brain */
+.ai-head { fill: none; stroke: var(--ai-stroke); stroke-width: 6; filter: drop-shadow(0 0 12px hsl(var(--brand-blue) / .25)); }
+.ai-brain { fill: none; stroke: var(--ai-stroke); stroke-width: 4; }
+.ai-brain-line { fill: none; stroke: var(--ai-stroke); stroke-width: 4; stroke-linecap: round; }
+.ai-node { fill: var(--ai-stroke); }
+
+/* Windows and code lines */
+.ai-window { fill: none; stroke: var(--ai-window-stroke); stroke-width: 2; }
+.ai-code { stroke: var(--ai-stroke-dim); stroke-width: 6; stroke-linecap: round; }
+
+/* Keyframes */
+@keyframes aiPulse {
+  0%, 100% { filter: drop-shadow(0 0 0 hsl(var(--brand-blue) / 0)); stroke-width: 4; }
+  50% { filter: drop-shadow(0 0 20px hsl(var(--brand-blue) / .5)); stroke-width: 5; }
+}
+@keyframes aiBlink {
+  0%, 100% { opacity: .2; }
+  50% { opacity: 1; }
+}
+@keyframes aiFadeInOut {
+  0%, 100% { opacity: .2; }
+  20%, 80% { opacity: 1; }
+}
+@keyframes aiSnake {
+  0% { stroke-dashoffset: 600; opacity: .0; }
+  10% { opacity: 1; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  80% { opacity: 1; }
+  100% { stroke-dashoffset: -600; opacity: 0; }
+}
+
+/* Animation application */
+.ai-pulse .ai-brain, .ai-pulse .ai-brain-line, .ai-pulse .ai-node { animation: aiPulse 2.8s ease-in-out infinite; }
+.ai-blink { animation: aiBlink 1.8s steps(2, end) infinite; }
+.ai-fade { animation: aiFadeInOut 5.5s ease-in-out infinite; }
+.ai-snake { fill: none; stroke: var(--ai-stroke); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 300 300; animation: aiSnake 4.5s linear infinite; filter: drop-shadow(0 0 10px hsl(var(--brand-blue) / .25)); }
+.ai-title { filter: drop-shadow(0 8px 24px hsl(var(--brand-blue) / .25)); }
+
+/* === Reusable button bounce === */
+@keyframes aiBtnBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+.ai-bounce { display: inline-block; animation: aiBtnBounce 1s ease-in-out infinite; will-change: transform; transform: translateZ(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-bounce { animation: none; transform: none; }
 }

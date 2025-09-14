@@ -46,7 +46,7 @@ const AboutSection = () => {
             
             <div className="bg-card p-6 rounded-lg shadow-subtle">
               <h4 className="text-xl font-bold mb-4 text-foreground">Technologie, których używamy:</h4>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 tech-wave">
                 {technologies.map((tech, index) => (
                   <span 
                     key={index}

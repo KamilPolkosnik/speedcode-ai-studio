@@ -26,7 +26,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Innovation Section */}
         <div className="text-center mb-16">
@@ -68,12 +68,15 @@ const ServicesSection = () => {
         </div>
 
         <div className="text-center">
-          <Button 
-            size="lg" 
-            className="bg-primary text-primary-foreground hover:bg-primary-variant shadow-blue"
-          >
-            WYCEN PROJEKT
-          </Button>
+          <div className="ai-bounce inline-block">
+            <Button 
+              type="button"
+              size="lg"
+              className="bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[28px] px-10 py-6 uppercase tracking-wide border-0 shadow-[0_20px_60px_-10px_rgba(47,107,255,0.45)]"
+            >
+              Wyceń swój projekt
+            </Button>
+          </div>
         </div>
       </div>
     </section>
