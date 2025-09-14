@@ -7,10 +7,12 @@ import ProcessSection from "@/components/ProcessSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import MatrixRain from "@/MatrixRain";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="relative z-10 min-h-screen">
+      <MatrixRain density={0.92} fontSize={16} speed={0.5} />
       <Header />
       <main>
         <HeroSection />
