@@ -100,6 +100,12 @@ const translations = {
     'contact.error': 'Ups! Coś poszło nie tak.',
     'contact.error.sub': 'Spróbuj ponownie.',
     'contact.back': 'Wróć do formularza',
+    'contact.budgetOptions.small': 'Do 20 000 zł',
+    'contact.budgetOptions.medium': '20 000 - 50 000 zł',
+    'contact.budgetOptions.large': '50 000 - 100 000 zł',
+    'contact.budgetOptions.xlarge': 'Powyżej 100 000 zł',
+    'contact.nda.yes': 'TAK',
+    'contact.nda.no': 'NIE',
     
     // Case Studies Section
     'casestudies.title': 'Nasi zadowoleni klienci',
@@ -138,6 +144,7 @@ const translations = {
     'process.integration': 'Integracja z zewnętrznymi narzędziami',
     'process.management': 'Zarządzanie projektem i koszty komunikacji',
     'process.hourlyRate': 'Stawka godzinowa',
+    'process.hourlyRateValue': '250 - 399zł',
     'process.projectTime': 'CZAS REALIZACJI PROJEKTU',
     'process.ourApproach': 'Nasze podejście',
     'process.approach.subtitle': 'Budujemy oprogramowanie używając innowacyjnej kombinacji narzędzi no-code/low-code oraz AI, aby usprawnić proces rozwoju i dostarczyć wysokiej jakości rezultaty. Dzięki silnemu skupieniu na optymalizacji rozwoju, możemy ożywić Twoją ideę bardziej efektywnie niż tradycyjne podejście do rozwoju oprogramowania.',
@@ -290,6 +297,12 @@ const translations = {
     'contact.error': 'Oops! Something went wrong.',
     'contact.error.sub': 'Please try again.',
     'contact.back': 'Back to form',
+    'contact.budgetOptions.small': 'Up to $5,000',
+    'contact.budgetOptions.medium': '$5,000 - $12,500',
+    'contact.budgetOptions.large': '$12,500 - $25,000',
+    'contact.budgetOptions.xlarge': 'Over $25,000',
+    'contact.nda.yes': 'YES',
+    'contact.nda.no': 'NO',
     
     // Case Studies Section
     'casestudies.title': 'Our satisfied clients',
@@ -328,6 +341,7 @@ const translations = {
     'process.integration': 'Integration with external tools',
     'process.management': 'Project management and communication costs',
     'process.hourlyRate': 'Hourly rate',
+    'process.hourlyRateValue': '$65 - 105',
     'process.projectTime': 'PROJECT IMPLEMENTATION TIME',
     'process.ourApproach': 'Our approach',
     'process.approach.subtitle': 'We build software using an innovative combination of no-code/low-code tools and AI to streamline the development process and deliver high-quality results. Thanks to our strong focus on development optimization, we can bring your idea to life more efficiently than traditional software development approaches.',

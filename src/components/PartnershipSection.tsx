@@ -111,7 +111,7 @@ const PartnershipSection = () => {
             </div>
           </div>
 
-          <div className="ai-bounce inline-block">
+          <div className="ai-bounce inline-block w-full flex justify-center">
             <a href="#contact">
               <Button 
                 type="button"

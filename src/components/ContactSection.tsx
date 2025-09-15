@@ -53,10 +53,10 @@ const ContactSection = () => {
   ];
 
   const budgets = [
-    "10 000$ i mniej",
-    "11 000$ - 25 000$", 
-    "26 000$ - 50 000$",
-    "Powyżej 50 000$"
+    t('contact.budgetOptions.small'),
+    t('contact.budgetOptions.medium'), 
+    t('contact.budgetOptions.large'),
+    t('contact.budgetOptions.xlarge')
   ];
 
   return (
@@ -157,11 +157,11 @@ const ContactSection = () => {
                   <div className="flex space-x-4">
                     <div className="flex items-center space-x-2">
                       <input type="radio" id="nda-no" name="nda" value="no" className="h-4 w-4" />
-                      <label htmlFor="nda-no" className="font-bold cursor-pointer">NIE</label>
+                      <label htmlFor="nda-no" className="font-bold cursor-pointer">{t('contact.nda.no')}</label>
                     </div>
                     <div className="flex items-center space-x-2">
                       <input type="radio" id="nda-yes" name="nda" value="yes" className="h-4 w-4" />
-                      <label htmlFor="nda-yes" className="font-bold cursor-pointer">TAK</label>
+                      <label htmlFor="nda-yes" className="font-bold cursor-pointer">{t('contact.nda.yes')}</label>
                     </div>
                   </div>
                 </div>

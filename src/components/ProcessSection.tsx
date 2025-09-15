@@ -15,7 +15,7 @@ const ProcessSection = () => {
         { task: t('process.management'), hours: "100 h" }
       ],
       total: "750 h",
-      rate: "250 - 399zł"
+      rate: t('process.hourlyRateValue')
     },
     {
       title: t('process.traditional.approach'),
@@ -29,7 +29,7 @@ const ProcessSection = () => {
         { task: t('process.management'), hours: "125 h" }
       ],
       total: "1375 h",
-      rate: "250 - 399zł"
+      rate: t('process.hourlyRateValue')
     }
   ];
 
