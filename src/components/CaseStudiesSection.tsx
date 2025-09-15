@@ -25,9 +25,9 @@ const CaseStudiesSection = () => {
       image: "🤝"
     },
         {
-      category: "IT",
-      title: "Partnerplace",
-      description: "Kompleksowa platforma dla firm do zarządzania relacjami partnerskimi na każdym poziomie współpracy.",
+      category: "SaaS",
+      title: "Sessio",
+      description: "Aplikacja dla prywatnych gabinetów psychoterapeutycznych do obsługi pacjentów i zarządzania gabinetem - projekt partnerski, obecnie w trakcie budowy.",
       image: "🤝"
     }
   ];
