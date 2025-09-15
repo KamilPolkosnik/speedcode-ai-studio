@@ -98,7 +98,7 @@ const ContactSection = () => {
                     </p>
                     <a href="tel:+48600469129">
                       <Button
-                        className="bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] px-4 py-2 text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)]"
+                        className="bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] mt-2 px-4 py-2 text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)]"
                         title={"+48 600 469 129"}
                         aria-label={`Zadzwoń +48 600 469 129`}
                       >
@@ -123,7 +123,7 @@ const ContactSection = () => {
                     </p>
                     <a href="tel:+48533821998">
                       <Button
-                        className="bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] px-4 py-2 text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)]"
+                        className="bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] mt-2 px-4 py-2 text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)]"
                         title={"+48 533 821 998"}
                         aria-label={`Zadzwoń +48 533 821 998`}
                       >
