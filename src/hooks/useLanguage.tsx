@@ -218,6 +218,8 @@ const translations = {
     'footer.aboutUs': 'O Nas',
     'footer.ourWork': 'Nasze Realizacje',
     'footer.contact': 'Kontakt',
+    'footer.partnership': 'Zostań partnerem',
+    'footer.funding': 'Dofinansowanie',
     'footer.madeWith': 'Stworzone z 💙 przez SpeedCode - AI software house'
   },
   EN: {
@@ -427,6 +429,8 @@ const translations = {
     'footer.aboutUs': 'About Us',
     'footer.ourWork': 'Our Work',
     'footer.contact': 'Contact',
+    'footer.partnership': 'Partnership',
+    'footer.funding': 'Founding',
     'footer.madeWith': 'Made with 💙 by SpeedCode - AI software house'
   }
 };
