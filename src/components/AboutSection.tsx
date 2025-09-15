@@ -1,6 +1,6 @@
 const AboutSection = () => {
   const technologies = [
-    "Bubble", "FlutterFlow", "Webflow", "Xano", "React", "Node.js", "AI APIs"
+    "ChatGPT", "Bubble", "FlutterFlow", "Lovable", "Bolt.new", "Webflow", "Xano", "React", "Node.js", "AI APIs", "Inne - najlepsze dla Twojego projektu!",
   ];
 
   return (
@@ -11,12 +11,12 @@ const AboutSection = () => {
             <h2 className="text-4xl font-bold mb-8 text-foreground">Kim jesteśmy?</h2>
             <div className="space-y-6 text-lg text-muted-foreground">
               <p>
-                W SpeedCode umożliwiamy zarówno globalnym startupom, jak i dojrzałym firmom przyspieszenie 
+                W SpeedCode umożliwiamy zarówno globalnym startupom, drobnym przedsiębiorcom jak i dojrzałym firmom przyspieszenie 
                 procesu tworzenia produktów dzięki zaawansowanym platformom no-code/low-code oraz sztucznej 
-                inteligencji w połączeniu z rozwojem na miarę.
+                inteligencji.
               </p>
               <p>
-                Wykorzystując platformy no-code/low-code takie jak Bubble, FlutterFlow, Webflow czy Xano, 
+                Wykorzystując platformy no-code/low-code takie jak Bubble, FlutterFlow, Webflow, Xano, Lovable, Bolt.new i inncych, 
                 nasi klienci doświadczają płynnego, zwinnego procesu rozwoju, który skutkuje wysokiej jakości 
                 produktami cyfrowymi, w tym stronami internetowymi i sklepami online.
               </p>
@@ -27,7 +27,7 @@ const AboutSection = () => {
               </p>
               <p>
                 Pomagamy firmom osiągnąć swoje cele poprzez dostarczanie zaawansowanych platform i aplikacji 
-                w inteligentniejszy sposób - wykorzystując technologię no-code/low-code oraz tworzenie 
+                w inteligentniejszy sposób - wykorzystując technologię AI, no-code/low-code oraz tworzenie 
                 dedykowanych stron internetowych i sklepów e-commerce.
               </p>
               <p className="font-semibold text-foreground">
@@ -40,8 +40,8 @@ const AboutSection = () => {
           <div className="space-y-8">
             <div className="bg-gradient-secondary p-8 rounded-lg text-white text-center">
               <div className="text-6xl mb-4">🏆</div>
-              <h3 className="text-2xl font-bold mb-2">AI Software House</h3>
-              <p>Przewodzimy przyszłości rozwoju</p>
+              <h3 className="text-2xl font-bold mb-2">SpeedCode</h3>
+              <p>Szybciej, lepiej, taniej!</p>
             </div>
             
             <div className="bg-card p-6 rounded-lg shadow-subtle">
