@@ -94,7 +94,7 @@ const ContactSection = () => {
                   <div>
                     <h3 className="font-bold text-foreground">Kamil Półkośnik</h3>
                     <p className="text-muted-foreground">
-                      CEO & Head of Technology / SpeedCode.io
+                      CEO & Head of Technology / SpeedCode
                     </p>
                     <a href="tel:+48600469129">
                       <Button
@@ -119,7 +119,7 @@ const ContactSection = () => {
                       Aureliusz Stelmaszek
                     </h3>
                     <p className="text-muted-foreground">
-                      CEO & Head of Business Operations / SpeedCode.io
+                      CEO & Head of Business Operations / SpeedCode
                     </p>
                     <a href="tel:+48533821998">
                       <Button
