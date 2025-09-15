@@ -17,11 +17,13 @@ const translations = {
     'nav.projects': 'Projekty', 
     'nav.about': 'O nas',
     'nav.partnership': 'Zostań partnerem',
+    'nav.funding': 'Dofinansowanie',
     'nav.letsTalk': 'Porozmawiajmy',
     'nav.services.title': 'Zobacz nasze usługi',
     'nav.projects.title': 'Zobacz nasze projekty',
     'nav.about.title': 'Dowiedz się o nas więcej',
     'nav.partnership.title': 'Zostań naszym partnerem',
+    'nav.funding.title': 'Dowiedz się o dofinansowaniu',
     'nav.letsTalk.title': 'Umów krótką rozmowę',
     'nav.language.title': 'Zmień język na angielski',
     
@@ -193,6 +195,15 @@ const translations = {
     'partnership.strategicSupport': '• Potrzebują wsparcia strategicznego',
     'partnership.cta': 'Porozmawiajmy o partnerstwie',
     
+    // Funding Section
+    'funding.title': 'Dofinansowanie na rozwój oprogramowania',
+    'funding.subtitle': 'Współpracujemy z zaufanym partnerem, który pomaga uzyskać dofinansowanie na aplikacje, strony internetowe, sklepy online i inne rozwiązania cyfrowe.',
+    'funding.partner': 'Partner: KostroKonsulting Biznes',
+    'funding.contact.title': 'Kontakt do partnera',
+    'funding.phones': 'Nr tel: +48 516 549 759, +48 799 038 425',
+    'funding.fb': 'Profil na Facebooku',
+    'funding.note': 'Skontaktuj się, aby sprawdzić możliwości dofinansowania Twojego projektu.',
+    
     // Footer
     'footer.description': 'AI software house tworzący dedykowane oprogramowanie dla firm szybciej i efektywniej.',
     'footer.rights': '© 2024 SpeedCode sp. z o.o. Wszelkie prawa zastrzeżone.',
@@ -214,11 +225,13 @@ const translations = {
     'nav.projects': 'Projects',
     'nav.about': 'About',
     'nav.partnership': 'Partnership',
+    'nav.funding': 'Funding',
     'nav.letsTalk': 'Let\'s talk',
     'nav.services.title': 'See our services',
     'nav.projects.title': 'See our projects',
     'nav.about.title': 'Learn more about us',
     'nav.partnership.title': 'Become our partner',
+    'nav.funding.title': 'Learn about funding',
     'nav.letsTalk.title': 'Schedule a quick call',
     'nav.language.title': 'Switch language to Polish',
     
@@ -389,6 +402,15 @@ const translations = {
     'partnership.shareRisk': '• Want to share risk and profits',
     'partnership.strategicSupport': '• Need strategic support',
     'partnership.cta': 'Let\'s talk about partnership',
+    
+    // Funding Section
+    'funding.title': 'Funding for software development',
+    'funding.subtitle': 'We work with a trusted partner who helps secure funding for applications, websites, online stores and other digital solutions.',
+    'funding.partner': 'Partner: KostroKonsulting Biznes',
+    'funding.contact.title': 'Partner contact',
+    'funding.phones': 'Phone: +48 516 549 759, +48 799 038 425',
+    'funding.fb': 'Facebook profile',
+    'funding.note': 'Get in touch to check funding opportunities for your project.',
     
     // Footer
     'footer.description': 'AI software house creating dedicated software for companies faster and more efficiently.',

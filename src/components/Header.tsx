@@ -60,6 +60,9 @@ const Header = () => {
             <a href="#partnership" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary hover:underline underline-offset-4 transition-colors" title={t('nav.partnership.title')}>
               {t('nav.partnership')}
             </a>
+            <a href="#funding" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary hover:underline underline-offset-4 transition-colors" title={t('nav.funding.title')}>
+              {t('nav.funding')}
+            </a>
           </nav>
 
           <div className="flex items-center space-x-2 md:space-x-4">
@@ -103,6 +106,9 @@ const Header = () => {
                   </a>
                   <a href="#partnership" className="text-lg font-medium text-foreground/90 hover:text-primary transition-colors" title={t('nav.partnership.title')}>
                     {t('nav.partnership')}
+                  </a>
+                  <a href="#funding" className="text-lg font-medium text-foreground/90 hover:text-primary transition-colors" title={t('nav.funding.title')}>
+                    {t('nav.funding')}
                   </a>
                   <div className="flex flex-col space-y-4 pt-6 border-t border-border">
                     <Button
