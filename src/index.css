@@ -114,10 +114,8 @@
     --muted: 220 45% 15%;
     --muted-foreground: 215 20% 65%;
 
-    /* Dark mode card enhancements */
-    --card-dark-bg: 220 45% 12%;
-    --card-dark-border: 220 45% 18%;
-    --card-dark-hover: 220 45% 15%;
+    /* Section backgrounds for better contrast */
+    --section-alt: 220 45% 6%;
 
     --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;

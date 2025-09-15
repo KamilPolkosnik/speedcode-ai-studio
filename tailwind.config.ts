@@ -51,11 +51,6 @@ export default {
         section: {
           alt: "hsl(var(--section-alt))",
         },
-        "card-dark": {
-          DEFAULT: "hsl(var(--card-dark-bg))",
-          border: "hsl(var(--card-dark-border))",
-          hover: "hsl(var(--card-dark-hover))",
-        },
         brand: {
           blue: "hsl(var(--brand-blue))",
           "blue-light": "hsl(var(--brand-blue-light))",
