@@ -251,7 +251,7 @@ const CaseStudiesSection = () => {
                 <Button
                   type="button"
                   size="lg"
-                  className="ai-bounce inline-flex items-center justify-center h-14 md:h-16 px-10 leading-none text-center bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[28px] uppercase tracking-wide border-0 shadow-[0_20px_60px_-10px_rgba(47,107,255,0.45)]"
+                  className="ai-bounce inline-flex items-center justify-center mt-4 h-14 md:h-16 px-10 leading-none text-center bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[28px] uppercase tracking-wide border-0 shadow-[0_20px_60px_-10px_rgba(47,107,255,0.45)]"
                 >
                   {t('casestudies.contactUs')}
                 </Button>
