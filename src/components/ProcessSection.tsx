@@ -96,7 +96,7 @@ const ProcessSection = () => {
         <div className="mb-20">
           <h2 className="text-4xl font-bold mb-8 text-center text-foreground">Nasze podejście</h2>
           <p className="text-lg text-muted-foreground text-center mb-12 max-w-4xl mx-auto">
-            Budujemy oprogramowanie używając innowacyjnej kombinacji rozwoju na miarę, narzędzi no-code/low-code 
+            Budujemy oprogramowanie używając innowacyjnej kombinacji narzędzi no-code/low-code 
             oraz AI, aby usprawnić proces rozwoju i dostarczyć wysokiej jakości rezultaty. Dzięki silnemu 
             skupieniu na optymalizacji rozwoju, możemy ożywić Twoją ideę bardziej efektywnie niż tradycyjne podejście do rozwoju oprogramowania.
           </p>
