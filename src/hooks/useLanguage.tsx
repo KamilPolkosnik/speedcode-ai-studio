@@ -430,7 +430,7 @@ const translations = {
     'footer.ourWork': 'Our Work',
     'footer.contact': 'Contact',
     'footer.partnership': 'Partnership',
-    'footer.funding': 'Founding',
+    'footer.funding': 'Funding',
     'footer.madeWith': 'Made with 💙 by SpeedCode - AI software house'
   }
 };
