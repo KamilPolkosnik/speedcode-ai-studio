@@ -198,7 +198,7 @@ const translations = {
     // Funding Section
     'funding.title': 'Dofinansowanie na rozwój oprogramowania',
     'funding.subtitle': 'Współpracujemy z zaufanym partnerem, który pomaga uzyskać dofinansowanie na aplikacje, strony internetowe, sklepy online i inne rozwiązania cyfrowe.',
-    'funding.partner': 'Partner: KostroKonsulting Biznes',
+    'funding.partner': 'KostroKonsulting Biznes',
     'funding.contact.title': 'Kontakt do partnera',
     'funding.phones': 'Nr tel: +48 516 549 759, +48 799 038 425',
     'funding.fb': 'Profil na Facebooku',
