@@ -29,14 +29,14 @@ const Index = () => {
         <PartnershipSection />
         
         {/* Partnership CTA between sections */}
-        <div className="py-16 bg-background">
+        <div className="py-2 bg-background">
           <div className="container mx-auto px-4 text-center">
             <div className="ai-bounce inline-block">
               <a href="#contact">
                 <Button 
                   type="button"
                   size="lg"
-                  className="h-auto min-h-14 px-2 py-4 bg-primary text-primary-foreground hover:bg-primary/90 rounded-[28px] uppercase tracking-wide border-0 shadow-[0_20px_60px_-10px_rgba(47,107,255,0.45)] font-bold leading-none flex items-center justify-center"
+                  className="h-auto min-h-14 px-10 py-4 bg-primary text-primary-foreground hover:bg-primary/90 rounded-[28px] uppercase tracking-wide border-0 shadow-[0_20px_60px_-10px_rgba(47,107,255,0.45)] font-bold leading-none flex items-center justify-center"
                 >
                   {t('partnership.cta')}
                 </Button>
