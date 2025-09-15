@@ -29,11 +29,11 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-4">{t('footer.services')}</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-muted hover:text-background transition-colors">{t('footer.webDev')}</a></li>
-              <li><a href="#" className="text-muted hover:text-background transition-colors">{t('footer.onlineStores')}</a></li>
-              <li><a href="#" className="text-muted hover:text-background transition-colors">{t('footer.mobileApps')}</a></li>
-              <li><a href="#" className="text-muted hover:text-background transition-colors">{t('footer.aiSolutions')}</a></li>
-              <li><a href="#" className="text-muted hover:text-background transition-colors">{t('footer.nocode')}</a></li>
+              <li><a href="#services" className="text-muted hover:text-background transition-colors">{t('footer.webDev')}</a></li>
+              <li><a href="#services" className="text-muted hover:text-background transition-colors">{t('footer.onlineStores')}</a></li>
+              <li><a href="#services" className="text-muted hover:text-background transition-colors">{t('footer.mobileApps')}</a></li>
+              <li><a href="#services" className="text-muted hover:text-background transition-colors">{t('footer.aiSolutions')}</a></li>
+              <li><a href="#services" className="text-muted hover:text-background transition-colors">{t('footer.nocode')}</a></li>
             </ul>
           </div>
 
