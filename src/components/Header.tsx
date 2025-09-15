@@ -56,6 +56,9 @@ const Header = () => {
             <a href="#about" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary hover:underline underline-offset-4 transition-colors" title={language === "PL" ? "Dowiedz się o nas więcej" : "Learn more about us"}>
               {language === "PL" ? "O nas" : "About"}
             </a>
+            <a href="#partnership" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary hover:underline underline-offset-4 transition-colors" title={language === "PL" ? "Zostań naszym partnerem" : "Become our partner"}>
+              {language === "PL" ? "Zostań partnerem" : "Partnership"}
+            </a>
           </nav>
 
           <div className="flex items-center space-x-2 md:space-x-4">
@@ -96,6 +99,9 @@ const Header = () => {
                   </a>
                   <a href="#about" className="text-lg font-medium text-foreground/90 hover:text-primary transition-colors" title={language === "PL" ? "Dowiedz się o nas więcej" : "Learn more about us"}>
                     {language === "PL" ? "O nas" : "About"}
+                  </a>
+                  <a href="#partnership" className="text-lg font-medium text-foreground/90 hover:text-primary transition-colors" title={language === "PL" ? "Zostań naszym partnerem" : "Become our partner"}>
+                    {language === "PL" ? "Zostań partnerem" : "Partnership"}
                   </a>
                   <div className="flex flex-col space-y-4 pt-6 border-t border-border">
                     <Button

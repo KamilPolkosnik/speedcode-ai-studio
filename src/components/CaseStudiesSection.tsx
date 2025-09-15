@@ -2,61 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import CountUp from "react-countup";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 
 const CaseStudiesSection = () => {
-  const [isContactOpen, setIsContactOpen] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState<null | boolean>(null);
-  const [submitMessage, setSubmitMessage] = useState<string>("");
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitSuccess(null);
-    setSubmitMessage("");
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        body: formData,
-      });
-
-      if (!res.ok) {
-        throw new Error(`HTTP ${res.status}`);
-      }
-
-      setSubmitSuccess(true);
-      setSubmitMessage("Dziękujemy! Formularz został wysłany.");
-      form.reset();
-    } catch (err) {
-      console.error(err);
-      setSubmitSuccess(false);
-      setSubmitMessage("Ups! Coś poszło nie tak. Spróbuj ponownie.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const challenges = [
-    "Rozwój aplikacji",
-    "UX/UI",
-    "Zapewnienie jakości",
-    "Integracje",
-    "Rozwiązania AI",
-    "Konsultacje"
-  ];
-
-  const budgets = [
-    "10 000$ i mniej",
-    "11 000$ - 25 000$", 
-    "26 000$ - 50 000$",
-    "Powyżej 50 000$"
-  ];
 
   const caseStudies = [
     {
@@ -226,158 +173,19 @@ const CaseStudiesSection = () => {
                 <div className="rounded-xl border border-white/20 bg-white/10 px-6 py-4 text-sm font-medium text-white/90 backdrop-blur-sm hover:bg-white/20 transition">Wyższa jakość delivery</div>
               </div>
 
-              <Button
-                type="button"
-                size="lg"
-                className="ai-bounce inline-flex items-center justify-center h-14 md:h-16 px-10 leading-none text-center bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[28px] uppercase tracking-wide border-0 shadow-[0_20px_60px_-10px_rgba(47,107,255,0.45)]"
-                onClick={() => setIsContactOpen(true)}
-              >
-                SKONTAKTUJ SIĘ Z NAMI
-              </Button>
+              <a href="#contact">
+                <Button
+                  type="button"
+                  size="lg"
+                  className="ai-bounce inline-flex items-center justify-center h-14 md:h-16 px-10 leading-none text-center bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[28px] uppercase tracking-wide border-0 shadow-[0_20px_60px_-10px_rgba(47,107,255,0.45)]"
+                >
+                  SKONTAKTUJ SIĘ Z NAMI
+                </Button>
+              </a>
             </div>
           </div>
         </div>
       </div>
-      {isContactOpen && (
-  <div
-    className="fixed inset-0 z-50 flex items-center justify-center"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="contact-modal-title"
-  >
-    {/* Backdrop */}
-    <div
-      className="absolute inset-0 bg-black/60"
-      onClick={() => setIsContactOpen(false)}
-    />
-
-    {/* Modal content */}
-    <div className="relative z-10 w-[80%] max-w-2xl max-h-[80%] mx-4 overflow-y-auto">
-      <div className="bg-background rounded-xl shadow-xl border border-border">
-        <div className="flex items-center justify-between px-6 py-4 border-b border-border">
-          <h3 id="contact-modal-title" className="text-xl font-bold text-foreground">Skontaktuj się z nami</h3>
-          <button
-            type="button"
-            className="text-muted-foreground hover:text-foreground"
-            aria-label="Zamknij"
-            onClick={() => setIsContactOpen(false)}
-          >
-            ✕
-          </button>
-        </div>
-
-        {(isSubmitting || submitSuccess !== null) ? (
-  <div className="p-10 flex flex-col items-center justify-center text-center min-h-[320px]">
-    {isSubmitting ? (
-      <>
-        <svg className="animate-spin h-10 w-10 mb-4 text-primary" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
-          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"/>
-        </svg>
-        <p className="text-foreground font-medium">Wysyłanie...</p>
-      </>
-    ) : submitSuccess ? (
-      <>
-        <div className="h-16 w-16 mb-4 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-3xl">✅</div>
-        <p className="text-foreground font-semibold mb-2">Dziękujemy! Formularz został wysłany.</p>
-        <p className="text-muted-foreground mb-6">Odezwiemy się w ciągu 24 godzin.</p>
-        <div className="flex gap-3">
-          <Button type="button" variant="secondary" onClick={() => setIsContactOpen(false)}>Zamknij</Button>
-          <Button type="button" variant="outline" onClick={() => { setSubmitSuccess(null); setSubmitMessage(""); }}>Wyślij kolejną wiadomość</Button>
-        </div>
-      </>
-    ) : (
-      <>
-        <div className="h-16 w-16 mb-4 rounded-full bg-red-100 text-red-700 flex items-center justify-center text-3xl">⚠️</div>
-        <p className="text-foreground font-semibold mb-2">Ups! Coś poszło nie tak.</p>
-        <p className="text-muted-foreground mb-6">Spróbuj ponownie.</p>
-        <div className="flex gap-3">
-          <Button type="button" variant="ghost" onClick={() => setIsContactOpen(false)}>Anuluj</Button>
-          <Button type="button" variant="secondary" onClick={() => { setSubmitSuccess(null); setSubmitMessage(""); }}>Wróć do formularza</Button>
-        </div>
-      </>
-    )}
-  </div>
-) : (
-  <form className="p-6 space-y-8" onSubmit={handleSubmit}>
-    <fieldset className="space-y-8">
-      {/* Step 1 */}
-      <div>
-        <h4 className="font-bold text-foreground mb-4">1. Jakie są Twoje główne wyzwania, z którymi możemy Ci pomóc?</h4>
-        <div className="grid grid-cols-2 gap-3">
-          {challenges.map((challenge, index) => (
-            <label key={index} className="flex items-center space-x-2 text-sm text-foreground cursor-pointer">
-              <input type="checkbox" name="challenges" value={challenge} className="h-4 w-4 border-border rounded" />
-              <span>{challenge}</span>
-            </label>
-          ))}
-        </div>
-      </div>
-
-      {/* Step 2 */}
-      <div>
-        <h4 className="font-bold text-foreground mb-4">2. Jaki jest Twój budżet?</h4>
-        <select name="budget" className="w-full p-3 border border-border rounded-md bg-background text-foreground">
-          <option>Wybierz opcję</option>
-          {budgets.map((budget, index) => (
-            <option key={index} value={budget}>{budget}</option>
-          ))}
-        </select>
-      </div>
-
-      {/* Step 3 */}
-      <div>
-        <h4 className="font-bold text-foreground mb-4">3. Czy potrzebujesz NDA?</h4>
-        <div className="flex space-x-4">
-          <label className="flex items-center space-x-2 cursor-pointer">
-            <input type="radio" name="nda" value="no" className="h-4 w-4" />
-            <span className="font-bold">NIE</span>
-          </label>
-          <label className="flex items-center space-x-2 cursor-pointer">
-            <input type="radio" name="nda" value="yes" className="h-4 w-4" />
-            <span className="font-bold">TAK</span>
-          </label>
-        </div>
-      </div>
-
-      {/* Step 4 */}
-      <div>
-        <h4 className="font-bold text-foreground mb-4">4. Uzupełnij szczegóły.</h4>
-        <div className="space-y-4">
-          <div className="grid md:grid-cols-2 gap-4">
-            <Input name="firstName" placeholder="Imię" />
-            <Input name="lastName" placeholder="Nazwisko" />
-          </div>
-          <Input name="email" placeholder="Email" type="email" />
-          <Input name="phone" placeholder="Telefon" type="tel" />
-          <Input name="company" placeholder="Firma" />
-          <Textarea name="message" placeholder="Opowiedz nam o swoim projekcie..." rows={4} />
-        </div>
-      </div>
-
-      {/* Consent */}
-      <div className="space-y-4">
-        <label className="flex items-start space-x-2 cursor-pointer">
-          <input type="checkbox" name="consent1" value="yes" className="mt-1 h-4 w-4" />
-          <span className="text-sm text-muted-foreground">Wyrażam zgodę na przetwarzanie moich danych osobowych przez SpeedCode sp. z o.o. i oświadczam, że podanie moich danych osobowych jest dobrowolne oraz że zostałem poinformowany o prawie żądania dostępu do moich danych osobowych, ich zmiany i usunięcia.</span>
-        </label>
-        <label className="flex items-start space-x-2 cursor-pointer">
-          <input type="checkbox" name="consent2" value="yes" className="mt-1 h-4 w-4" />
-          <span className="text-sm text-muted-foreground">Wyrażam zgodę na przetwarzanie moich danych osobowych przez SpeedCode sp. z o.o. w celach marketingowych. Wyrażenie zgody jest dobrowolne. Masz prawo do wycofania zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania na podstawie zgody przed jej wycofaniem.</span>
-        </label>
-      </div>
-    </fieldset>
-
-    <div className="flex items-center justify-end gap-3 pt-2">
-      <Button type="button" variant="ghost" onClick={() => setIsContactOpen(false)}>Anuluj</Button>
-      <Button type="submit" size="lg" className="bg-primary text-primary-foreground hover:bg-primary-variant">Wyślij Wiadomość</Button>
-    </div>
-  </form>
-)}
-      </div>
-    </div>
-  </div>
-)}
     </section>
   );
 };
