@@ -68,7 +68,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
           {services.map((service, index) => (
             <Card
               key={index}
@@ -81,7 +81,7 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        <div className="text-center">
+        <div className="text-center mt-12">
           <div className="ai-bounce inline-block">
             <a href="#contact">
               <Button 

@@ -79,7 +79,7 @@ const Header = () => {
             </Button>
             <a href="#contact">
               <Button
-                className="hidden sm:block bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] px-3 md:px-5 py-2.5 text-sm md:text-base font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)]"
+                className="hidden sm:block bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] px-3 md:px-5 py-2.5 text-sm md:text-base font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)] h-10 flex items-center justify-center"
                 title={t('nav.letsTalk.title')}
               >
                 {t('nav.letsTalk')}
@@ -121,7 +121,7 @@ const Header = () => {
                     </Button>
                     <a href="#contact">
                       <Button
-                        className="w-full bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] py-3 text-base font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)]"
+                        className="w-full bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] py-3 text-base font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)] h-12 flex items-center justify-center"
                         title={t('nav.letsTalk.title')}
                       >
                         {t('nav.letsTalk')}

@@ -203,6 +203,7 @@ const translations = {
     'funding.phones': 'Nr tel: +48 516 549 759, +48 799 038 425, +48 514 970 378',
     'funding.fb': 'Profil na Facebooku',
     'funding.note': 'Skontaktuj się, aby sprawdzić możliwości dofinansowania Twojego projektu.',
+    'funding.cta': 'POROZMAWIAJMY O DOFINANSOWANIU',
     
     // Footer
     'footer.description': 'AI software house tworzący dedykowane oprogramowanie dla firm szybciej i efektywniej.',
@@ -411,6 +412,7 @@ const translations = {
     'funding.phones': 'Phone: +48 516 549 759, +48 799 038 425, +48 514 970 378',
     'funding.fb': 'Facebook profile',
     'funding.note': 'Get in touch to check funding opportunities for your project.',
+    'funding.cta': 'LET\'S TALK ABOUT FUNDING',
     
     // Footer
     'footer.description': 'AI software house creating dedicated software for companies faster and more efficiently.',
