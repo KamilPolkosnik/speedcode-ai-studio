@@ -6,7 +6,7 @@ const FundingSection = () => {
   const { t } = useLanguage();
   const phones = t('funding.phones').replace(/^.*?:\s*/, '').split(',').map(p => p.trim());
   return (
-    <section id="funding" className="py-20 bg-background">
+    <section id="funding" className="py-12 bg-background">
       <div className="container mx-auto px-4">
         <header className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">
@@ -52,19 +52,6 @@ const FundingSection = () => {
           </Card>
         </div>
         
-        <div className="text-center mt-16">
-          <div className="ai-bounce inline-block">
-            <a href="#contact">
-              <Button 
-                type="button"
-                size="lg"
-                className="bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[28px] px-10 py-6 uppercase tracking-wide border-0 shadow-[0_20px_60px_-10px_rgba(47,107,255,0.45)]"
-              >
-                {t('funding.cta')}
-              </Button>
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );

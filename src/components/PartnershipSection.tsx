@@ -111,17 +111,6 @@ const PartnershipSection = () => {
             </div>
           </div>
 
-          <div className="w-full flex justify-center">
-            <a href="#contact" className="inline-flex">
-              <Button 
-                type="button"
-                size="lg"
-                className="ai-bounce mx-auto h-auto min-h-14 px-10 py-4 bg-primary text-primary-foreground hover:bg-primary/90 rounded-[28px] uppercase tracking-wide border-0 shadow-[0_20px_60px_-10px_rgba(255,255,255,0.3)] font-bold leading-none"
-              >
-                {t('partnership.cta')}
-              </Button>
-            </a>
-          </div>
         </div>
       </div>
     </section>
