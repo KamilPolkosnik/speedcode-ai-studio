@@ -65,7 +65,7 @@ const translations = {
     // About Section
     'about.title': 'Kim jesteśmy?',
     'about.p1': 'W SpeedCode umożliwiamy zarówno globalnym startupom, drobnym przedsiębiorcom jak i dojrzałym firmom przyspieszenie procesu tworzenia produktów dzięki zaawansowanym platformom no-code/low-code oraz sztucznej inteligencji.',
-    'about.p2': 'Wykorzystując platformy no-code/low-code takie jak Bubble, FlutterFlow, Webflow, Xano, Lovable, Bolt.new i inncych, nasi klienci doświadczają płynnego, zwinnego procesu rozwoju, który skutkuje wysokiej jakości produktami cyfrowymi, w tym stronami internetowymi i sklepami online.',
+    'about.p2': 'Wykorzystując platformy no-code/low-code takie jak Bubble, FlutterFlow, Webflow, Xano, Lovable, Bolt.new i innych, nasi klienci doświadczają płynnego, zwinnego procesu rozwoju, który skutkuje wysokiej jakości produktami cyfrowymi, w tym stronami internetowymi i sklepami online.',
     'about.p3': 'Wierzymy, że rozwój no-code/low-code oraz rozwój AI to remedium na dzisiejsze wyzwania, z którymi mierzą się rozwijające się firmy – szybkie wejście na rynek, walidacja pomysłów, iteracja i pivot z produktem, poprawa efektywności biznesowej.',
     'about.p4': 'Pomagamy firmom osiągnąć swoje cele poprzez dostarczanie zaawansowanych platform i aplikacji w inteligentniejszy sposób - wykorzystując technologię AI, no-code/low-code oraz tworzenie dedykowanych stron internetowych i sklepów e-commerce.',
     'about.values': 'Transparentna, jasna komunikacja i wzajemne zaufanie to fundament naszych wartości. Nie jesteś tylko naszym klientem. Jesteś naszym partnerem.',
