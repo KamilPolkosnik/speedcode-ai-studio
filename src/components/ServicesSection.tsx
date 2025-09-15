@@ -87,7 +87,7 @@ const ServicesSection = () => {
               <Button 
                 type="button"
                 size="lg"
-                className="bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[28px] px-10 py-6 uppercase tracking-wide border-0 shadow-[0_20px_60px_-10px_rgba(47,107,255,0.45)]"
+                className="bg-[#2F6BFF] hover:bg-[#2A5FF0] mt-2 text-white rounded-[28px] px-10 py-6 uppercase tracking-wide border-0 shadow-[0_20px_60px_-10px_rgba(47,107,255,0.45)]"
               >
                 {t('services.quote')}
               </Button>
