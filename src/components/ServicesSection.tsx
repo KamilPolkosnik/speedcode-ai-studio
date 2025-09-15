@@ -63,7 +63,7 @@ const ServicesSection = () => {
               key={index}
               className="p-6 text-center hover:shadow-blue transition-transform transform hover:scale-105 duration-300 ease-in-out"
             >
-              <div className="text-4xl mb-4">{service.icon}</div>
+              <div className="text-4xl mb-4" style={{ color: '#00D9FF' }}>{service.icon}</div>
               <h3 className="text-xl font-bold mb-4 text-foreground">{service.title}</h3>
               <p className="text-muted-foreground">{service.description}</p>
             </Card>

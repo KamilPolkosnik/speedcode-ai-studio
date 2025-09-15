@@ -115,7 +115,7 @@ const CaseStudiesSection = () => {
                 <div className="cs-glow" style={{background: "radial-gradient(120px 120px at 50% 30%, hsl(var(--brand-blue)/.35), transparent 60%)"}} />
 
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-5xl">{study.image}</div>
+                  <div className="text-5xl" style={{ color: '#00D9FF' }}>{study.image}</div>
                   <span className="text-xs font-semibold px-3 py-1 rounded-full border border-border text-muted-foreground">
                     {study.category}
                   </span>

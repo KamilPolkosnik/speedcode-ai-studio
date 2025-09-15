@@ -104,25 +104,25 @@ const ProcessSection = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="text-2xl">🚀</div>
+                <div className="text-2xl" style={{ color: '#00D9FF' }}>🚀</div>
                 <p className="text-foreground">
                   Dostarczamy aplikacje z najwyższymi standardami bezpieczeństwa, użyteczności i wydajności.
                 </p>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="text-2xl">⚡</div>
+                <div className="text-2xl" style={{ color: '#00D9FF' }}>⚡</div>
                 <p className="text-foreground">
                   Wykorzystanie platform no-code/low-code oraz sztucznej inteligencji pozwala nam iterować z Twoim produktem szybciej niż w tradycyjnym podejściu.
                 </p>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="text-2xl">🔄</div>
+                <div className="text-2xl" style={{ color: '#00D9FF' }}>🔄</div>
                 <p className="text-foreground">
                   Łącząc nasze zwinne podejście z elastycznością platform no-code, pracujemy z klientami w metodologii lean startup, dzięki czemu możesz szybko zwalidować swoją ideę i sprawdzić potencjał rynkowy.
                 </p>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="text-2xl">✨</div>
+                <div className="text-2xl" style={{ color: '#00D9FF' }}>✨</div>
                 <p className="text-foreground">
                   Szybko rozpoczynamy projekty i zapewniamy płynną realizację, od analizy, UI/UX, rozwoju, testów po wprowadzenie na rynek.
                 </p>
@@ -143,7 +143,7 @@ const ProcessSection = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {processSteps.map((step, index) => (
               <div key={index} className="text-center">
-                <div className="text-6xl mb-6">{step.icon}</div>
+                <div className="text-6xl mb-6" style={{ color: '#00D9FF' }}>{step.icon}</div>
                 <h3 className="text-2xl font-bold mb-4 text-primary">{step.title}</h3>
                 <p className="text-muted-foreground">{step.description}</p>
               </div>

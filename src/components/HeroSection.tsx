@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import { Button } from "@/components/ui/button";
-import heroF35 from "@/assets/speedcode.png";
+import heroF35 from "@/assets/hero-f35.png";
 
 const HeroSection = () => {
   return (
