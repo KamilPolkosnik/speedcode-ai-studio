@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import { Button } from "@/components/ui/button";
-import heroTechDiagram from "@/assets/hero-tech-diagram.png";
+import heroBlueGlow from "@/assets/hero-blue-glow.png";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const HeroSection = () => {
@@ -58,7 +58,7 @@ const HeroSection = () => {
           
           <div className="flex justify-center lg:justify-end">
             <img 
-              src={heroTechDiagram} 
+              src={heroBlueGlow} 
               alt={t('hero.title2') + " " + t('hero.title3').split(' rozwiązania')[0]} 
               className="w-full max-w-lg h-auto"
             />
