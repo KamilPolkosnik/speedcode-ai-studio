@@ -114,7 +114,7 @@ const PartnershipSection = () => {
               <Button 
                 type="button"
                 size="lg"
-                className="bg-primary text-white hover:bg-white/90 rounded-[28px] px-10 py-6 uppercase tracking-wide border-0 shadow-[0_20px_60px_-10px_rgba(255,255,255,0.3)] font-bold"
+                className="bg-primary text-white hover:bg-primary/90 rounded-[28px] px-10 py-6 uppercase tracking-wide border-0 shadow-[0_20px_60px_-10px_rgba(255,255,255,0.3)] font-bold"
               >
                 Porozmawiajmy o partnerstwie
               </Button>
