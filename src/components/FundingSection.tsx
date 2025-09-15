@@ -4,6 +4,7 @@ import { useLanguage } from "@/hooks/useLanguage";
 
 const FundingSection = () => {
   const { t } = useLanguage();
+  const phones = t('funding.phones').replace(/^.*?:\s*/, '').split(',').map(p => p.trim());
   return (
     <section id="funding" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -27,10 +28,24 @@ const FundingSection = () => {
                 </a>
               </div>
             </div>
-
-            <div className="space-y-2">
+            <div className="space-y-3">
               <h4 className="text-xl font-bold text-foreground">{t('funding.contact.title')}</h4>
-              <p className="text-muted-foreground">{t('funding.phones')}</p>
+              <div className="flex flex-col gap-3 pt-1">
+                {phones.map((p) => {
+                  const tel = p.replace(/\s+/g, '');
+                  return (
+                    <a key={p} href={`tel:${tel}`}>
+                      <Button
+                        className="bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] px-4 py-2 text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)]"
+                        title={p}
+                        aria-label={`Zadzwoń ${p}`}
+                      >
+                        {p}
+                      </Button>
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </Card>

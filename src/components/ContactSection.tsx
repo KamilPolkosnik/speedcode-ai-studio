@@ -77,23 +77,49 @@ const ContactSection = () => {
               </p>
             </div>
 
-            <Card className="p-6">
-              <div className="flex items-center space-x-4">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl">
-                  👨‍💼
+            <div className="space-y-6">
+              <Card className="p-6 bg-card/80 border border-border">
+                <div className="flex items-center space-x-4">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl">
+                    👨‍💼
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground">Kamil Półkośnik</h3>
+                    <p className="text-muted-foreground">CEO & Head of Technology / SpeedCode.io</p>
+                    <a href="tel:+48600469129">
+                      <Button
+                        className="bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] px-4 py-2 text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)]"
+                        title={"+48 600 469 129"}
+                        aria-label={`Zadzwoń +48 600 469 129`}
+                      >
+                        +48 600 469 129
+                      </Button>
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-foreground">Kamil Półkośnik</h3>
-                  <p className="text-muted-foreground">CEO & Head of Technology / SpeedCode.io</p>
-                  <p className="text-primary font-semibold">M: +48 600 469 129</p>
+              </Card>
+
+              <Card className="p-6 bg-card/80 border border-border">
+                <div className="flex items-center space-x-4">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl">
+                    👨‍💼
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground">Aureliusz Stelmaszek</h3>
+                    <p className="text-muted-foreground">CEO & Head of Business Operations / SpeedCode.io</p>
+                    <a href="tel:+48533821998">
+                      <Button
+                        className="bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] px-4 py-2 text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)]"
+                        title={"+48 533 821 998"}
+                        aria-label={`Zadzwoń +48 533 821 998`}
+                      >
+                        +48 533 821 998
+                      </Button>
+                    </a>
+                  </div>
                 </div>
-                                <div>
-                  <h3 className="font-bold text-foreground">Aureliusz Stelmaszek</h3>
-                  <p className="text-muted-foreground">CEO & Head of Business Operations / SpeedCode.io</p>
-                  <p className="text-primary font-semibold">M: +48 533 821 998</p>
-                </div>
-              </div>
-            </Card>
+              </Card>
+            </div>
           </div>
 
           {/* Contact Form */}

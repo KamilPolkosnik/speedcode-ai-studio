@@ -200,7 +200,7 @@ const translations = {
     'funding.subtitle': 'Współpracujemy z zaufanym partnerem, który pomaga uzyskać dofinansowanie na aplikacje, strony internetowe, sklepy online i inne rozwiązania cyfrowe.',
     'funding.partner': 'KostroKonsulting Biznes',
     'funding.contact.title': 'Kontakt do partnera',
-    'funding.phones': 'Nr tel: +48 516 549 759, +48 799 038 425',
+    'funding.phones': 'Nr tel: +48 516 549 759, +48 799 038 425, +48 514 970 378',
     'funding.fb': 'Profil na Facebooku',
     'funding.note': 'Skontaktuj się, aby sprawdzić możliwości dofinansowania Twojego projektu.',
     
@@ -408,7 +408,7 @@ const translations = {
     'funding.subtitle': 'We work with a trusted partner who helps secure funding for applications, websites, online stores and other digital solutions.',
     'funding.partner': 'KostroKonsulting Biznes',
     'funding.contact.title': 'Partner contact',
-    'funding.phones': 'Phone: +48 516 549 759, +48 799 038 425',
+    'funding.phones': 'Phone: +48 516 549 759, +48 799 038 425, +48 514 970 378',
     'funding.fb': 'Facebook profile',
     'funding.note': 'Get in touch to check funding opportunities for your project.',
     
