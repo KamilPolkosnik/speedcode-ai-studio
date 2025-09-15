@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import { Button } from "@/components/ui/button";
-import heroF35Universal from "@/assets/hero-f35-universal.png";
+import heroTechDiagram from "@/assets/hero-tech-diagram.png";
 
 const HeroSection = () => {
   return (
@@ -43,8 +43,8 @@ const HeroSection = () => {
           
           <div className="flex justify-center lg:justify-end">
             <img 
-              src={heroF35Universal} 
-              alt="Szybki rozwój z AI" 
+              src={heroTechDiagram} 
+              alt="Nowoczesne rozwiązania technologiczne" 
               className="w-full max-w-lg h-auto"
             />
           </div>
