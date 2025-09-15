@@ -1,9 +1,14 @@
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import { Button } from "@/components/ui/button";
-import heroF35 from "@/assets/hero-f35.png";
+import { useTheme } from "next-themes";
+import heroF35Dark from "@/assets/hero-f35.png";
+import heroF35Light from "@/assets/hero-f35-light.png";
 
 const HeroSection = () => {
+  const { theme } = useTheme();
+  const heroImage = theme === "light" ? heroF35Light : heroF35Dark;
+
   return (
     <section className="min-h-screen bg-gradient-hero flex items-center">
       <div className="container mx-auto px-4 py-20">
@@ -43,7 +48,7 @@ const HeroSection = () => {
           
           <div className="flex justify-center lg:justify-end">
             <img 
-              src={heroF35} 
+              src={heroImage} 
               alt="Szybki rozwój z AI" 
               className="w-full max-w-lg h-auto"
             />
