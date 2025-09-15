@@ -4,13 +4,13 @@ const ReviewsSection = () => {
   const reviews = [
     {
       quote: "Wysoka jakość, bardzo szybki czas wykonania.",
-      author: "Kamil P.",
+      author: "Joanna P.",
       position: "Właściciel, Virentia Luxuria",
       rating: 5
     },
     {
       quote: "Doskonałe zarządzanie projektem, ciekawe propozycje i bardzo szybkie wdrożenie.",
-      author: "Aureliusz S.",
+      author: "Tomasz R.",
       position: "CEO, Bookfinanse",
       rating: 5
     },
