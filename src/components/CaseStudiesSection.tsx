@@ -3,6 +3,17 @@ import CountUp from "react-countup";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
+// Import images
+import virentiacrm1 from "@/assets/virentia-crm-1.png";
+import virentiacrm2 from "@/assets/virentia-crm-2.png";
+import virentiacrm3 from "@/assets/virentia-crm-3.png";
+import virentiashop1 from "@/assets/virentia-shop-1.png";
+import virentiashop2 from "@/assets/virentia-shop-2.png";
+import virentiashop3 from "@/assets/virentia-shop-3.png";
+import sessio1 from "@/assets/sessio-1.png";
+import sessio2 from "@/assets/sessio-2.png";
+import sessio3 from "@/assets/sessio-3.png";
+
 const CaseStudiesSection = () => {
 
   const caseStudies = [
@@ -10,30 +21,31 @@ const CaseStudiesSection = () => {
       category: "CRM",
       title: "Virentia Luxuria",
       description: "Nowoczesny CRM do zarządzania magazynem oraz sprzedażą. zbudowany za pomocą narzędzi no-code.",
-      image: "🖥️"
+      images: [virentiacrm1, virentiacrm2, virentiacrm3]
     },
     {
       category: "E-commerce",
       title: "Sklep Virentia Luxuria",
       description: "Sklep internetowy Virentia Luxuria - tradycyjny design, skorelowany z produktami ziołowymi.",
-      image: "🍀"
+      images: [virentiashop1, virentiashop2, virentiashop3]
     },
     {
       category: "CRM",
       title: "Bookfinanse",
       description: "Kompleksowe oprogramowanie do obsługi zadań i zarządzania klientem.",
-      image: "🤝"
+      images: []
     },
-        {
+    {
       category: "SaaS",
       title: "Sessio",
       description: "Aplikacja dla prywatnych gabinetów psychoterapeutycznych do obsługi pacjentów i zarządzania gabinetem - projekt partnerski, obecnie w trakcie budowy.",
-      image: "🤝"
+      images: [sessio1, sessio2, sessio3]
     }
   ];
 
   const categories = ["Wszystko", ...Array.from(new Set(caseStudies.map(c => c.category)))];
   const [activeCat, setActiveCat] = useState<string>("Wszystko");
+  const [activeImages, setActiveImages] = useState<{[key: string]: number}>({});
   const gridRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -115,17 +127,52 @@ const CaseStudiesSection = () => {
                 <div className="cs-glow" style={{background: "radial-gradient(120px 120px at 50% 30%, hsl(var(--brand-blue)/.35), transparent 60%)"}} />
 
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-5xl" style={{ color: '#00D9FF' }}>{study.image}</div>
                   <span className="text-xs font-semibold px-3 py-1 rounded-full border border-border text-muted-foreground">
                     {study.category}
                   </span>
                 </div>
 
+                {/* Image Gallery */}
+                {study.images.length > 0 && (
+                  <div className="mb-4 relative">
+                    <div className="aspect-video rounded-lg overflow-hidden bg-muted">
+                      <img 
+                        src={study.images[activeImages[study.title] || 0]} 
+                        alt={`${study.title} screenshot ${(activeImages[study.title] || 0) + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    
+                    {/* Image Navigation */}
+                    {study.images.length > 1 && (
+                      <div className="flex justify-center gap-2 mt-2">
+                        {study.images.map((_, imgIndex) => (
+                          <button
+                            key={imgIndex}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setActiveImages(prev => ({
+                                ...prev,
+                                [study.title]: imgIndex
+                              }));
+                            }}
+                            className={`w-2 h-2 rounded-full transition ${
+                              (activeImages[study.title] || 0) === imgIndex
+                                ? 'bg-primary'
+                                : 'bg-muted-foreground/30 hover:bg-muted-foreground/60'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+
                 <h3 className="cs-title text-xl font-bold mb-2 text-foreground">{study.title}</h3>
                 <p className="text-sm text-muted-foreground mb-6">{study.description}</p>
 
                 <div className="flex items-center gap-2 text-primary text-sm font-semibold opacity-0 group-hover:opacity-100 transition">
-                  <span>Przeczytaj case</span>
+                  <span>Zobacz więcej</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
