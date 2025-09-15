@@ -100,7 +100,7 @@ const CaseStudiesSection = () => {
   };
 
   return (
-    <section id="case-studies" className="py-20 bg-secondary">
+    <section id="case-studies" className="py-20 bg-secondary dark:bg-section-alt">
       <div className="container mx-auto px-4">
         <div className="text-center mb-4">
           <h2 className="text-4xl font-bold text-foreground mb-8">

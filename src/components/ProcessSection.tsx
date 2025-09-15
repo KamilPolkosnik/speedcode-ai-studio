@@ -52,7 +52,7 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-secondary">
+    <section className="py-20 bg-secondary dark:bg-section-alt">
       <div className="container mx-auto px-4">
         {/* Innovation Section */}
         <div className="mb-20">

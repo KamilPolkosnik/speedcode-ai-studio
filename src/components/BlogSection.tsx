@@ -21,7 +21,7 @@ const BlogSection = () => {
   ];
 
   return (
-    <section id="blog" className="py-20 bg-secondary">
+    <section id="blog" className="py-20 bg-secondary dark:bg-section-alt">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-6 text-foreground">
