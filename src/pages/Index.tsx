@@ -29,7 +29,7 @@ const Index = () => {
         <PartnershipSection />
         
         {/* Partnership CTA between sections */}
-        <div className="py-2 bg-background">
+        <div className="pt-4 pb-8 bg-background">
           <div className="container mx-auto px-4 text-center">
             <div className="ai-bounce inline-block">
               <a href="#contact">
