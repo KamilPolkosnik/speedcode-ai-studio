@@ -65,7 +65,7 @@ const PartnershipSection = () => {
           ))}
         </div>
 
-        <div className="bg-gradient-secondary rounded-2xl p-12 text-white text-center">
+        <div className="bg-gradient-secondary rounded-2xl p-8 md:p-12 text-white text-center">
           <h3 className="text-3xl font-bold mb-6">
             {t('partnership.model.title')}
           </h3>
