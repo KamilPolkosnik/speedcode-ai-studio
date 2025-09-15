@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import CountUp from "react-countup";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { ImageLightbox } from "./ImageLightbox";
 
 // Import images
 import virentiacrm1 from "@/assets/virentia-crm-1.png";
@@ -46,6 +47,10 @@ const CaseStudiesSection = () => {
   const categories = ["Wszystko", ...Array.from(new Set(caseStudies.map(c => c.category)))];
   const [activeCat, setActiveCat] = useState<string>("Wszystko");
   const [activeImages, setActiveImages] = useState<{[key: string]: number}>({});
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxImages, setLightboxImages] = useState<string[]>([]);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [lightboxTitle, setLightboxTitle] = useState("");
   const gridRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -67,7 +72,28 @@ const CaseStudiesSection = () => {
     return () => io.disconnect();
   }, [activeCat]);
 
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setLightboxOpen(false);
+      }
+    };
+    
+    if (lightboxOpen) {
+      document.addEventListener('keydown', handleEsc);
+    }
+    
+    return () => document.removeEventListener('keydown', handleEsc);
+  }, [lightboxOpen]);
+
   const filtered = activeCat === "Wszystko" ? caseStudies : caseStudies.filter(c => c.category === activeCat);
+
+  const openLightbox = (images: string[], index: number, title: string) => {
+    setLightboxImages(images);
+    setLightboxIndex(index);
+    setLightboxTitle(title);
+    setLightboxOpen(true);
+  };
 
   const handleTiltMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const card = e.currentTarget as HTMLDivElement;
@@ -132,44 +158,44 @@ const CaseStudiesSection = () => {
                   </span>
                 </div>
 
-                {/* Image Gallery */}
+                <h3 className="cs-title text-xl font-bold mb-2 text-foreground">{study.title}</h3>
+                <p className="text-sm text-muted-foreground mb-6">{study.description}</p>
+
+                {/* Image Gallery - positioned below title and description */}
                 {study.images.length > 0 && (
-                  <div className="mb-4 relative">
-                    <div className="aspect-video rounded-lg overflow-hidden bg-muted">
-                      <img 
-                        src={study.images[activeImages[study.title] || 0]} 
-                        alt={`${study.title} screenshot ${(activeImages[study.title] || 0) + 1}`}
-                        className="w-full h-full object-cover"
-                      />
+                  <div className="mb-6">
+                    <div className="grid grid-cols-3 gap-2">
+                      {study.images.slice(0, 3).map((image, imgIndex) => (
+                        <div
+                          key={imgIndex}
+                          className="aspect-video rounded-lg overflow-hidden bg-muted cursor-pointer hover:ring-2 hover:ring-primary transition-all"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            openLightbox(study.images, imgIndex, study.title);
+                          }}
+                        >
+                          <img 
+                            src={image} 
+                            alt={`${study.title} screenshot ${imgIndex + 1}`}
+                            className="w-full h-full object-cover hover:scale-105 transition-transform"
+                          />
+                        </div>
+                      ))}
                     </div>
                     
-                    {/* Image Navigation */}
-                    {study.images.length > 1 && (
-                      <div className="flex justify-center gap-2 mt-2">
-                        {study.images.map((_, imgIndex) => (
-                          <button
-                            key={imgIndex}
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              setActiveImages(prev => ({
-                                ...prev,
-                                [study.title]: imgIndex
-                              }));
-                            }}
-                            className={`w-2 h-2 rounded-full transition ${
-                              (activeImages[study.title] || 0) === imgIndex
-                                ? 'bg-primary'
-                                : 'bg-muted-foreground/30 hover:bg-muted-foreground/60'
-                            }`}
-                          />
-                        ))}
-                      </div>
+                    {study.images.length > 3 && (
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          openLightbox(study.images, 0, study.title);
+                        }}
+                        className="text-xs text-primary hover:text-primary/80 mt-2 transition"
+                      >
+                        +{study.images.length - 3} więcej zdjęć
+                      </button>
                     )}
                   </div>
                 )}
-
-                <h3 className="cs-title text-xl font-bold mb-2 text-foreground">{study.title}</h3>
-                <p className="text-sm text-muted-foreground mb-6">{study.description}</p>
 
                 <div className="flex items-center gap-2 text-primary text-sm font-semibold opacity-0 group-hover:opacity-100 transition">
                   <span>Zobacz więcej</span>
@@ -233,6 +259,16 @@ const CaseStudiesSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Image Lightbox */}
+      <ImageLightbox
+        images={lightboxImages}
+        currentIndex={lightboxIndex}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        onIndexChange={setLightboxIndex}
+        title={lightboxTitle}
+      />
     </section>
   );
 };
