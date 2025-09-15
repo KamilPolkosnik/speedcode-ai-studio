@@ -81,9 +81,14 @@ const ContactSection = () => {
                   👨‍💼
                 </div>
                 <div>
-                  <h3 className="font-bold text-foreground">Emil Bednarczyk</h3>
-                  <p className="text-muted-foreground">Partner Kliencki / SpeedCode.io</p>
-                  <p className="text-primary font-semibold">M: +48 792 015 688</p>
+                  <h3 className="font-bold text-foreground">Kamil Półkośnik</h3>
+                  <p className="text-muted-foreground">CEO & Head of Technology / SpeedCode.io</p>
+                  <p className="text-primary font-semibold">M: +48 600 469 129</p>
+                </div>
+                                <div>
+                  <h3 className="font-bold text-foreground">Aureliusz Stelmaszek</h3>
+                  <p className="text-muted-foreground">CEO & Head of Business Operations / SpeedCode.io</p>
+                  <p className="text-primary font-semibold">M: +48 533 821 998</p>
                 </div>
               </div>
             </Card>
