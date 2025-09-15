@@ -4,8 +4,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const ContactSection = () => {
+  const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState<null | boolean>(null);
   const [submitMessage, setSubmitMessage] = useState<string>("");
@@ -30,24 +32,24 @@ const ContactSection = () => {
       }
 
       setSubmitSuccess(true);
-      setSubmitMessage("Dziękujemy! Formularz został wysłany.");
+      setSubmitMessage(t('contact.success'));
       form.reset();
     } catch (err) {
       console.error(err);
       setSubmitSuccess(false);
-      setSubmitMessage("Ups! Coś poszło nie tak. Spróbuj ponownie.");
+      setSubmitMessage(t('contact.error'));
     } finally {
       setIsSubmitting(false);
     }
   };
 
   const challenges = [
-    "Rozwój aplikacji",
-    "UX/UI",
-    "Zapewnienie jakości",
-    "Integracje",
-    "Rozwiązania AI",
-    "Konsultacje"
+    t('contact.challenge.development'),
+    t('contact.challenge.ux'),
+    t('contact.challenge.quality'),
+    t('contact.challenge.integrations'),
+    t('contact.challenge.ai'),
+    t('contact.challenge.consulting')
   ];
 
   const budgets = [
@@ -65,13 +67,13 @@ const ContactSection = () => {
           <div>
             <div className="mb-12">
               <h2 className="text-5xl font-bold mb-4 text-foreground">
-                Cześć!
+                {t('contact.hello')}
               </h2>
               <p className="text-xl text-foreground mb-6">
-                Chciałbym usłyszeć o Twoim projekcie!
+                {t('contact.subtitle')}
               </p>
               <p className="text-muted-foreground mb-8">
-                Odpowiemy na Twoją wiadomość w ciągu 24 godzin. Tak, to TAKIE proste!
+                {t('contact.response')}
               </p>
             </div>
 
@@ -127,7 +129,7 @@ const ContactSection = () => {
               <form className="space-y-8" onSubmit={handleSubmit}>
                 {/* Step 1 */}
                 <div>
-                  <h3 className="font-bold text-foreground mb-4">1. Jakie są Twoje główne wyzwania, z którymi możemy Ci pomóc?</h3>
+                  <h3 className="font-bold text-foreground mb-4">{t('contact.challenges')}</h3>
                   <div className="grid grid-cols-2 gap-3">
                     {challenges.map((challenge, index) => (
                       <div key={index} className="flex items-center space-x-2">
@@ -140,9 +142,9 @@ const ContactSection = () => {
 
                 {/* Step 2 */}
                 <div>
-                  <h3 className="font-bold text-foreground mb-4">2. Jaki jest Twój budżet?</h3>
+                  <h3 className="font-bold text-foreground mb-4">{t('contact.budget')}</h3>
                   <select name="budget" className="w-full p-3 border border-border rounded-md bg-background text-foreground">
-                    <option>Wybierz opcję</option>
+                    <option>{t('contact.budget.select')}</option>
                     {budgets.map((budget, index) => (
                       <option key={index} value={budget}>{budget}</option>
                     ))}
@@ -151,7 +153,7 @@ const ContactSection = () => {
 
                 {/* Step 3 */}
                 <div>
-                  <h3 className="font-bold text-foreground mb-4">3. Czy potrzebujesz NDA?</h3>
+                  <h3 className="font-bold text-foreground mb-4">{t('contact.nda')}</h3>
                   <div className="flex space-x-4">
                     <div className="flex items-center space-x-2">
                       <input type="radio" id="nda-no" name="nda" value="no" className="h-4 w-4" />
@@ -166,16 +168,16 @@ const ContactSection = () => {
 
                 {/* Step 4 */}
                 <div>
-                  <h3 className="font-bold text-foreground mb-4">4. Uzupełnij szczegóły.</h3>
+                  <h3 className="font-bold text-foreground mb-4">{t('contact.details')}</h3>
                   <div className="space-y-4">
                     <div className="grid md:grid-cols-2 gap-4">
-                      <Input name="firstName" placeholder="Imię" />
-                      <Input name="lastName" placeholder="Nazwisko" />
+                      <Input name="firstName" placeholder={t('contact.firstName')} />
+                      <Input name="lastName" placeholder={t('contact.lastName')} />
                     </div>
-                    <Input name="email" placeholder="Email" type="email" />
-                    <Input name="phone" placeholder="Telefon" type="tel" />
-                    <Input name="company" placeholder="Firma" />
-                    <Textarea name="message" placeholder="Opowiedz nam o swoim projekcie..." rows={4} />
+                    <Input name="email" placeholder={t('contact.email')} type="email" />
+                    <Input name="phone" placeholder={t('contact.phone')} type="tel" />
+                    <Input name="company" placeholder={t('contact.company')} />
+                    <Textarea name="message" placeholder={t('contact.message')} rows={4} />
                   </div>
                 </div>
 
@@ -183,16 +185,16 @@ const ContactSection = () => {
                 <div className="space-y-4">
                   <div className="flex items-start space-x-2">
                     <input type="checkbox" id="consent1" name="consent1" value="yes" className="mt-1 h-4 w-4" />
-                    <label htmlFor="consent1" className="text-sm text-muted-foreground cursor-pointer">Wyrażam zgodę na przetwarzanie moich danych osobowych przez SpeedCode sp. z o.o. i oświadczam, że podanie moich danych osobowych jest dobrowolne oraz że zostałem poinformowany o prawie żądania dostępu do moich danych osobowych, ich zmiany i usunięcia.</label>
+                    <label htmlFor="consent1" className="text-sm text-muted-foreground cursor-pointer">{t('contact.consent1')}</label>
                   </div>
                   <div className="flex items-start space-x-2">
                     <input type="checkbox" id="consent2" name="consent2" value="yes" className="mt-1 h-4 w-4" />
-                    <label htmlFor="consent2" className="text-sm text-muted-foreground cursor-pointer">Wyrażam zgodę na przetwarzanie moich danych osobowych przez SpeedCode sp. z o.o. w celach marketingowych. Wyrażenie zgody jest dobrowolne. Masz prawo do wycofania zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania na podstawie zgody przed jej wycofaniem.</label>
+                    <label htmlFor="consent2" className="text-sm text-muted-foreground cursor-pointer">{t('contact.consent2')}</label>
                   </div>
                 </div>
 
                 <Button type="submit" size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary-variant">
-                  Wyślij Wiadomość
+                  {t('contact.send')}
                 </Button>
               </form>
             )}

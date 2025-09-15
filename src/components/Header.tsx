@@ -3,9 +3,10 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import speedCodeLogo from "@/assets/speedcode-logo.png";
 import { useEffect, useState } from "react";
 import { Moon, Sun, Menu } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const Header = () => {
-  const [language, setLanguage] = useState("PL");
+  const { language, setLanguage, t } = useLanguage();
   const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
@@ -47,38 +48,38 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary hover:underline underline-offset-4 transition-colors" title={language === "PL" ? "Zobacz nasze usługi" : "See our services"}>
-              {language === "PL" ? "Usługi" : "Services"}
+            <a href="#services" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary hover:underline underline-offset-4 transition-colors" title={t('nav.services.title')}>
+              {t('nav.services')}
             </a>
-            <a href="#case-studies" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary hover:underline underline-offset-4 transition-colors" title={language === "PL" ? "Zobacz nasze projekty" : "See our projects"}>
-              {language === "PL" ? "Projekty" : "Projects"}
+            <a href="#case-studies" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary hover:underline underline-offset-4 transition-colors" title={t('nav.projects.title')}>
+              {t('nav.projects')}
             </a>
-            <a href="#about" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary hover:underline underline-offset-4 transition-colors" title={language === "PL" ? "Dowiedz się o nas więcej" : "Learn more about us"}>
-              {language === "PL" ? "O nas" : "About"}
+            <a href="#about" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary hover:underline underline-offset-4 transition-colors" title={t('nav.about.title')}>
+              {t('nav.about')}
             </a>
-            <a href="#partnership" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary hover:underline underline-offset-4 transition-colors" title={language === "PL" ? "Zostań naszym partnerem" : "Become our partner"}>
-              {language === "PL" ? "Zostań partnerem" : "Partnership"}
+            <a href="#partnership" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary hover:underline underline-offset-4 transition-colors" title={t('nav.partnership.title')}>
+              {t('nav.partnership')}
             </a>
           </nav>
 
           <div className="flex items-center space-x-2 md:space-x-4">
-            <Button variant="outline" onClick={toggleTheme} size="sm" className="p-2" aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}>
+            <Button variant="outline" onClick={toggleTheme} size="sm" className="h-9 w-9 p-0" aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}>
               {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>
             <Button
               variant="outline"
               onClick={toggleLanguage}
-              className="hidden md:block text-sm font-medium"
-              aria-label={language === "PL" ? "Zmień język na angielski" : "Switch language to Polish"}
+              className="hidden md:block text-sm font-medium h-9 px-3"
+              aria-label={t('nav.language.title')}
             >
               {language === "PL" ? "PL" : "EN"}
             </Button>
             <a href="#contact">
               <Button
                 className="hidden sm:block bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] px-3 md:px-5 py-2.5 text-sm md:text-base font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)]"
-                title={language === "PL" ? "Umów krótką rozmowę" : "Schedule a quick call"}
+                title={t('nav.letsTalk.title')}
               >
-                {language === "PL" ? "Porozmawiajmy" : "Let's talk"}
+                {t('nav.letsTalk')}
               </Button>
             </a>
             
@@ -91,33 +92,33 @@ const Header = () => {
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <nav className="flex flex-col space-y-6 mt-6">
-                  <a href="#services" className="text-lg font-medium text-foreground/90 hover:text-primary transition-colors" title={language === "PL" ? "Zobacz nasze usługi" : "See our services"}>
-                    {language === "PL" ? "Usługi" : "Services"}
+                  <a href="#services" className="text-lg font-medium text-foreground/90 hover:text-primary transition-colors" title={t('nav.services.title')}>
+                    {t('nav.services')}
                   </a>
-                  <a href="#case-studies" className="text-lg font-medium text-foreground/90 hover:text-primary transition-colors" title={language === "PL" ? "Zobacz nasze projekty" : "See our projects"}>
-                    {language === "PL" ? "Projekty" : "Projects"}
+                  <a href="#case-studies" className="text-lg font-medium text-foreground/90 hover:text-primary transition-colors" title={t('nav.projects.title')}>
+                    {t('nav.projects')}
                   </a>
-                  <a href="#about" className="text-lg font-medium text-foreground/90 hover:text-primary transition-colors" title={language === "PL" ? "Dowiedz się o nas więcej" : "Learn more about us"}>
-                    {language === "PL" ? "O nas" : "About"}
+                  <a href="#about" className="text-lg font-medium text-foreground/90 hover:text-primary transition-colors" title={t('nav.about.title')}>
+                    {t('nav.about')}
                   </a>
-                  <a href="#partnership" className="text-lg font-medium text-foreground/90 hover:text-primary transition-colors" title={language === "PL" ? "Zostań naszym partnerem" : "Become our partner"}>
-                    {language === "PL" ? "Zostań partnerem" : "Partnership"}
+                  <a href="#partnership" className="text-lg font-medium text-foreground/90 hover:text-primary transition-colors" title={t('nav.partnership.title')}>
+                    {t('nav.partnership')}
                   </a>
                   <div className="flex flex-col space-y-4 pt-6 border-t border-border">
                     <Button
                       variant="outline"
                       onClick={toggleLanguage}
                       className="w-full justify-center text-sm font-medium"
-                      aria-label={language === "PL" ? "Zmień język na angielski" : "Switch language to Polish"}
+                      aria-label={t('nav.language.title')}
                     >
                       {language === "PL" ? "PL" : "EN"}
                     </Button>
                     <a href="#contact">
                       <Button
                         className="w-full bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] py-3 text-base font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)]"
-                        title={language === "PL" ? "Umów krótką rozmowę" : "Schedule a quick call"}
+                        title={t('nav.letsTalk.title')}
                       >
-                        {language === "PL" ? "Porozmawiajmy" : "Let's talk"}
+                        {t('nav.letsTalk')}
                       </Button>
                     </a>
                   </div>

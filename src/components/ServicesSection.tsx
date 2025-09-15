@@ -1,27 +1,30 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const ServicesSection = () => {
+  const { t } = useLanguage();
+  
   const services = [
     {
       icon: "🎯",
-      title: "Kompleksowe Wsparcie",
-      description: "Od analizy biznesowej, warsztatów, brandingu i projektowania UX/UI po rozwój i testowanie aplikacji."
+      title: t('services.comprehensive'),
+      description: t('services.comprehensive.desc')
     },
     {
       icon: "💻",
-      title: "Platformy Webowe",
-      description: "Strony internetowe, sklepy online, CRM'y, systemy rezerwacji, platformy e-learningowe i rozwiązania job board."
+      title: t('services.web'),
+      description: t('services.web.desc')
     },
     {
       icon: "📱",
-      title: "Aplikacje Mobilne",
-      description: "Kompletne aplikacje mobilne na iOS i Android — dostosowane do celów biznesowych."
+      title: t('services.mobile'),
+      description: t('services.mobile.desc')
     },
     {
       icon: "🤖",
-      title: "Rozwiązania AI i Automatyzacja",
-      description: "Spersonalizowane ChatBoty, Generatory, Analizatory oraz Agenci AI."
+      title: t('services.ai'),
+      description: t('services.ai.desc')
     }
   ];
 
@@ -31,28 +34,36 @@ const ServicesSection = () => {
         {/* Innovation Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">
-            <span className="text-primary italic">Innowacyjne</span>
-            <span className="text-foreground"> technologie,</span>
-            <span className="text-primary italic"> szybszy</span>
-            <span className="text-foreground"> start Twojego biznesu</span>
+            <span className="text-primary italic">{t('services.innovation.title1')}</span>
+            <span className="text-foreground">{t('services.innovation.title2')}</span>
+            <span className="text-primary italic">{t('services.innovation.title3')}</span>
+            <span className="text-foreground">{t('services.innovation.title4')}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-            W SpeedCode zawsze wybieramy najefektywniejszą ścieżkę technologiczną, aby dostarczać skalowalne, 
-            bezpieczne i wysokowydajne rozwiązania — od MVP i narzędzi szytych na miarę po zaawansowane aplikacje 
-            i złożone systemy. To podejście zapewnia naszym klientom co najmniej <span className="text-primary italic font-bold"> 40% szybszą efektywność przy równoczesnym zmniejszeniu kosztów.</span>
+            {t('services.innovation.subtitle').split('co najmniej').length > 1 ? (
+              <>
+                {t('services.innovation.subtitle').split('co najmniej')[0]}
+                <span className="text-primary italic font-bold">co najmniej 40% szybszą efektywność przy równoczesnym zmniejszeniu kosztów.</span>
+              </>
+            ) : t('services.innovation.subtitle').split('at least').length > 1 ? (
+              <>
+                {t('services.innovation.subtitle').split('at least')[0]}
+                <span className="text-primary italic font-bold">at least 40% faster efficiency while reducing costs.</span>
+              </>
+            ) : (
+              t('services.innovation.subtitle')
+            )}
           </p>
         </div>
 
         {/* Services Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">
-            <span className="text-foreground">Od pomysłu do uruchomienia </span>
-            <span className="text-primary italic">– szybciej, kompleksowo, bez kompromisów</span>
+            <span className="text-foreground">{t('services.title1')}</span>
+            <span className="text-primary italic">{t('services.title2')}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto mb-12">
-            Wykorzystując zaawansowane technologie AI, No-Code/Low-Code, pomagamy Ci efektywnie 
-            przekształcać Twój pomysł w pełni funkcjonalne narzędzia szyte na miarę, strony internetowe, 
-            sklepy online oraz aplikacje mobilne. Poznaj pełną gamę naszych usług:
+            {t('services.subtitle')}
           </p>
         </div>
 
@@ -78,7 +89,7 @@ const ServicesSection = () => {
                 size="lg"
                 className="bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[28px] px-10 py-6 uppercase tracking-wide border-0 shadow-[0_20px_60px_-10px_rgba(47,107,255,0.45)]"
               >
-                Wyceń swój projekt
+                {t('services.quote')}
               </Button>
             </a>
           </div>
