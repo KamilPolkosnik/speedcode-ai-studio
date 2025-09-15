@@ -72,20 +72,6 @@ const CaseStudiesSection = () => {
     return () => io.disconnect();
   }, [activeCat]);
 
-  useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        setLightboxOpen(false);
-      }
-    };
-    
-    if (lightboxOpen) {
-      document.addEventListener('keydown', handleEsc);
-    }
-    
-    return () => document.removeEventListener('keydown', handleEsc);
-  }, [lightboxOpen]);
-
   const filtered = activeCat === "Wszystko" ? caseStudies : caseStudies.filter(c => c.category === activeCat);
 
   const openLightbox = (images: string[], index: number, title: string) => {
@@ -148,6 +134,11 @@ const CaseStudiesSection = () => {
                 className="cs-card relative p-6 cursor-pointer cs-tilt"
                 onMouseMove={handleTiltMove}
                 onMouseLeave={handleTiltLeave}
+                onClick={() => {
+                  if (study.images.length > 0) {
+                    openLightbox(study.images, 0, study.title);
+                  }
+                }}
               >
                 {/* glow */}
                 <div className="cs-glow" style={{background: "radial-gradient(120px 120px at 50% 30%, hsl(var(--brand-blue)/.35), transparent 60%)"}} />

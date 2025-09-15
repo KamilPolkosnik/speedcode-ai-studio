@@ -38,6 +38,31 @@ export const ImageLightbox = ({
     };
   }, [isOpen, currentIndex]);
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!isOpen) return;
+      
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        prevImage();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        nextImage();
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleKeyDown);
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, currentIndex, images.length]);
+
   const handleWheel = (e: React.WheelEvent) => {
     e.preventDefault();
     const delta = e.deltaY > 0 ? 0.9 : 1.1;
@@ -170,7 +195,7 @@ export const ImageLightbox = ({
         )}
         
         <div className="p-4 bg-muted/50 text-center text-sm text-muted-foreground">
-          Scroll aby powiększyć • Przeciągnij aby przesunąć • ESC aby zamknąć
+          Scroll aby powiększyć • Przeciągnij aby przesunąć • ← → aby przełączać • ESC aby zamknąć
         </div>
       </Card>
     </div>
