@@ -111,12 +111,12 @@ const PartnershipSection = () => {
             </div>
           </div>
 
-          <div className="ai-bounce inline-block w-full flex justify-center">
-            <a href="#contact">
+          <div className="ai-bounce w-full flex justify-center">
+            <a href="#contact" className="inline-flex">
               <Button 
                 type="button"
                 size="lg"
-                className="bg-primary text-white hover:bg-primary/90 rounded-[28px] px-10 py-6 uppercase tracking-wide border-0 shadow-[0_20px_60px_-10px_rgba(255,255,255,0.3)] font-bold"
+                className="mx-auto bg-primary text-white hover:bg-primary/90 rounded-[28px] px-10 py-6 uppercase tracking-wide border-0 shadow-[0_20px_60px_-10px_rgba(255,255,255,0.3)] font-bold"
               >
                 {t('partnership.cta')}
               </Button>
