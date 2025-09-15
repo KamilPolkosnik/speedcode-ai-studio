@@ -406,7 +406,7 @@ const translations = {
     // Funding Section
     'funding.title': 'Funding for software development',
     'funding.subtitle': 'We work with a trusted partner who helps secure funding for applications, websites, online stores and other digital solutions.',
-    'funding.partner': 'Partner: KostroKonsulting Biznes',
+    'funding.partner': 'KostroKonsulting Biznes',
     'funding.contact.title': 'Partner contact',
     'funding.phones': 'Phone: +48 516 549 759, +48 799 038 425',
     'funding.fb': 'Facebook profile',
