@@ -1,6 +1,8 @@
 import speedCodeLogo from "@/assets/speedcode-logo.png";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const Footer = () => {
+  const { t } = useLanguage();
   return (
     <footer className="bg-foreground text-background py-12">
       <div className="container mx-auto px-4">
@@ -16,39 +18,39 @@ const Footer = () => {
               <span className="text-xl font-bold">SpeedCode</span>
             </div>
             <p className="text-muted mb-4">
-              AI software house tworzący dedykowane oprogramowanie dla firm szybciej i efektywniej.
+              {t('footer.description')}
             </p>
             <p className="text-sm text-muted">
-              © 2024 SpeedCode sp. z o.o. Wszelkie prawa zastrzeżone.
+              {t('footer.rights')}
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="font-bold mb-4">Usługi</h4>
+            <h4 className="font-bold mb-4">{t('footer.services')}</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-muted hover:text-background transition-colors">Rozwój Stron Web</a></li>
-              <li><a href="#" className="text-muted hover:text-background transition-colors">Sklepy Online</a></li>
-              <li><a href="#" className="text-muted hover:text-background transition-colors">Aplikacje Mobilne</a></li>
-              <li><a href="#" className="text-muted hover:text-background transition-colors">Rozwiązania AI</a></li>
-              <li><a href="#" className="text-muted hover:text-background transition-colors">No-Code/Low-Code</a></li>
+              <li><a href="#" className="text-muted hover:text-background transition-colors">{t('footer.webDev')}</a></li>
+              <li><a href="#" className="text-muted hover:text-background transition-colors">{t('footer.onlineStores')}</a></li>
+              <li><a href="#" className="text-muted hover:text-background transition-colors">{t('footer.mobileApps')}</a></li>
+              <li><a href="#" className="text-muted hover:text-background transition-colors">{t('footer.aiSolutions')}</a></li>
+              <li><a href="#" className="text-muted hover:text-background transition-colors">{t('footer.nocode')}</a></li>
             </ul>
           </div>
 
           {/* Company */}
           <div>
-            <h4 className="font-bold mb-4">Firma</h4>
+            <h4 className="font-bold mb-4">{t('footer.company')}</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#about" className="text-muted hover:text-background transition-colors">O Nas</a></li>
-              <li><a href="#case-studies" className="text-muted hover:text-background transition-colors">Nasze Realizacje</a></li>
-              <li><a href="#contact" className="text-muted hover:text-background transition-colors">Kontakt</a></li>
+              <li><a href="#about" className="text-muted hover:text-background transition-colors">{t('footer.aboutUs')}</a></li>
+              <li><a href="#case-studies" className="text-muted hover:text-background transition-colors">{t('footer.ourWork')}</a></li>
+              <li><a href="#contact" className="text-muted hover:text-background transition-colors">{t('footer.contact')}</a></li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-muted mt-8 pt-8 text-center">
           <p className="text-sm text-muted">
-            Stworzone z 💙 przez SpeedCode - AI software house
+            {t('footer.madeWith')}
           </p>
         </div>
       </div>

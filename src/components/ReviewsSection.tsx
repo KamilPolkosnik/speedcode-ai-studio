@@ -1,21 +1,24 @@
 import { Card } from "@/components/ui/card";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const ReviewsSection = () => {
+  const { t } = useLanguage();
+  
   const reviews = [
     {
-      quote: "Wysoka jakość, bardzo szybki czas wykonania.",
+      quote: t('reviews.quote1'),
       author: "Joanna P.",
       position: "Właściciel, Virentia Luxuria",
       rating: 5
     },
     {
-      quote: "Doskonałe zarządzanie projektem, ciekawe propozycje i bardzo szybkie wdrożenie.",
+      quote: t('reviews.quote2'),
       author: "Tomasz R.",
       position: "CEO, Bookfinanse",
       rating: 5
     },
     {
-      quote: "Współpraca ze SpeedCode to czysta przyjemność.",
+      quote: t('reviews.quote3'),
       author: "Łukasz Z.",
       position: "Manager, Zetgrid",
       rating: 5
@@ -27,7 +30,7 @@ const ReviewsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-8 text-foreground">
-            Traktujemy naszych klientów jak partnerów
+            {t('reviews.title')}
           </h2>
         </div>
 

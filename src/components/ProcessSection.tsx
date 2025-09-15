@@ -1,29 +1,32 @@
+import { useLanguage } from "@/hooks/useLanguage";
+
 const ProcessSection = () => {
+  const { t } = useLanguage();
   const approaches = [
     {
-      title: "PODEJŚCIE INNOWACYJNE",
+      title: t('process.innovative.approach'),
       color: "bg-primary",
       items: [
-        { task: "Analiza wymagań i projektowanie", hours: "50 h" },
-        { task: "Design UX/UI", hours: "100 h" },
-        { task: "Implementacja projektu (frontend & backend)", hours: "350 h" },
-        { task: "Wdrożenie i testowanie", hours: "100 h" },
-        { task: "Integracja z zewnętrznymi narzędziami", hours: "50 h" },
-        { task: "Zarządzanie projektem i koszty komunikacji", hours: "100 h" }
+        { task: t('process.requirements'), hours: "50 h" },
+        { task: t('process.design'), hours: "100 h" },
+        { task: t('process.implementation'), hours: "350 h" },
+        { task: t('process.deployment'), hours: "100 h" },
+        { task: t('process.integration'), hours: "50 h" },
+        { task: t('process.management'), hours: "100 h" }
       ],
       total: "750 h",
       rate: "250 - 399zł"
     },
     {
-      title: "PODEJŚCIE TRADYCYJNE",
+      title: t('process.traditional.approach'),
       color: "bg-muted",
       items: [
-        { task: "Analiza wymagań i projektowanie", hours: "200 h" },
-        { task: "Design UX/UI", hours: "125 h" },
-        { task: "Implementacja projektu (frontend & backend)", hours: "600 h" },
-        { task: "Wdrożenie i testowanie", hours: "250 h" },
-        { task: "Integracja z zewnętrznymi narzędziami", hours: "75 h" },
-        { task: "Zarządzanie projektem i koszty komunikacji", hours: "125 h" }
+        { task: t('process.requirements'), hours: "200 h" },
+        { task: t('process.design'), hours: "125 h" },
+        { task: t('process.implementation'), hours: "600 h" },
+        { task: t('process.deployment'), hours: "250 h" },
+        { task: t('process.integration'), hours: "75 h" },
+        { task: t('process.management'), hours: "125 h" }
       ],
       total: "1375 h",
       rate: "250 - 399zł"
@@ -32,18 +35,18 @@ const ProcessSection = () => {
 
   const processSteps = [
     {
-      title: "ZAKRES",
-      description: "Łączymy Twoje pomysły i potrzeby oraz nasze sugestie. Definiujemu cele i skupiamy się na kluczowych funkcjach potrzebnych do rozwoju. Pierwszym krokiem jest przekształcenie idei w produkt.",
+      title: t('process.scope'),
+      description: t('process.scope.desc'),
       icon: "🎯"
     },
     {
-      title: "DESIGN",
-      description: "Uzgadniamy zakres prac, przygotowujemy makiety wraz z prototypem, aby potwierdzić, że wszyscy rozumiemy potencjalne ścieżki klientów. Kończymy proces, kiedy upewnimy się, że użytkownik oprogramowania dostanie jak najlepsze rozwiązanie, a Twoja firma dzięki temu zarobi.",
+      title: t('process.design.title'),
+      description: t('process.design.desc'),
       icon: "🎨"
     },
     {
-      title: "ROZWÓJ",
-      description: "Budujemy Twoje oprogramowanie, używając platform no-code/low-code oraz AI, które uznaliśmy za najlepszy możliwy wybór. Jesteś informowany o wszystkich krokach, które podejmujemy.",
+      title: t('process.development'),
+      description: t('process.development.desc'),
       icon: "⚡"
     }
   ];
@@ -54,11 +57,10 @@ const ProcessSection = () => {
         {/* Innovation Section */}
         <div className="mb-20">
           <h2 className="text-4xl font-bold mb-12 text-center text-foreground">
-            Innowacja, która napędza efektywność rozwoju
+            {t('process.innovation.title')}
           </h2>
           <p className="text-lg text-muted-foreground text-center mb-12 max-w-4xl mx-auto">
-            Łączenie narzędzi AI oraz No-Code/Low-Code odblokowuje najwyższy poziom optymalizacji 
-            rozwoju — oszczędzając Twój czas, budżet i zasoby w budowaniu produktów cyfrowych.
+            {t('process.innovation.subtitle')}
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -79,11 +81,11 @@ const ProcessSection = () => {
 
                 <div className="border-t pt-4">
                   <div className="flex justify-between items-center mb-2">
-                    <span className="font-semibold">Stawka godzinowa</span>
+                    <span className="font-semibold">{t('process.hourlyRate')}</span>
                     <span className="text-primary">{approach.rate}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="font-bold">CZAS REALIZACJI PROJEKTU</span>
+                    <span className="font-bold">{t('process.projectTime')}</span>
                     <span className="font-bold text-xl text-primary">{approach.total}</span>
                   </div>
                 </div>
@@ -94,11 +96,9 @@ const ProcessSection = () => {
 
         {/* Our Approach */}
         <div className="mb-20">
-          <h2 className="text-4xl font-bold mb-8 text-center text-foreground">Nasze podejście</h2>
+          <h2 className="text-4xl font-bold mb-8 text-center text-foreground">{t('process.ourApproach')}</h2>
           <p className="text-lg text-muted-foreground text-center mb-12 max-w-4xl mx-auto">
-            Budujemy oprogramowanie używając innowacyjnej kombinacji narzędzi no-code/low-code 
-            oraz AI, aby usprawnić proces rozwoju i dostarczyć wysokiej jakości rezultaty. Dzięki silnemu 
-            skupieniu na optymalizacji rozwoju, możemy ożywić Twoją ideę bardziej efektywnie niż tradycyjne podejście do rozwoju oprogramowania.
+            {t('process.approach.subtitle')}
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
@@ -106,25 +106,25 @@ const ProcessSection = () => {
               <div className="flex items-start space-x-4">
                 <div className="text-2xl" style={{ color: '#00D9FF' }}>🚀</div>
                 <p className="text-foreground">
-                  Dostarczamy aplikacje z najwyższymi standardami bezpieczeństwa, użyteczności i wydajności.
+                  {t('process.highStandards')}
                 </p>
               </div>
               <div className="flex items-start space-x-4">
                 <div className="text-2xl" style={{ color: '#00D9FF' }}>⚡</div>
                 <p className="text-foreground">
-                  Wykorzystanie platform no-code/low-code oraz sztucznej inteligencji pozwala nam iterować z Twoim produktem szybciej niż w tradycyjnym podejściu.
+                  {t('process.fasterIteration')}
                 </p>
               </div>
               <div className="flex items-start space-x-4">
                 <div className="text-2xl" style={{ color: '#00D9FF' }}>🔄</div>
                 <p className="text-foreground">
-                  Łącząc nasze zwinne podejście z elastycznością platform no-code, pracujemy z klientami w metodologii lean startup, dzięki czemu możesz szybko zwalidować swoją ideę i sprawdzić potencjał rynkowy.
+                  {t('process.leanStartup')}
                 </p>
               </div>
               <div className="flex items-start space-x-4">
                 <div className="text-2xl" style={{ color: '#00D9FF' }}>✨</div>
                 <p className="text-foreground">
-                  Szybko rozpoczynamy projekty i zapewniamy płynną realizację, od analizy, UI/UX, rozwoju, testów po wprowadzenie na rynek.
+                  {t('process.quickStart')}
                 </p>
               </div>
             </div>
@@ -138,7 +138,7 @@ const ProcessSection = () => {
 
         {/* How we work */}
         <div>
-          <h2 className="text-4xl font-bold mb-12 text-center text-foreground">Jak pracujemy?</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center text-foreground">{t('process.howWeWork')}</h2>
           
           <div className="grid md:grid-cols-3 gap-8">
             {processSteps.map((step, index) => (
