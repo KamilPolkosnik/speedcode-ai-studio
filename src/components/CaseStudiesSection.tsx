@@ -242,9 +242,9 @@ const CaseStudiesSection = () => {
               </p>
 
               <div className="grid sm:grid-cols-3 gap-3 mb-10">
-                <div className="rounded-xl border border-white/20 bg-white/10 px-6 py-4 text-sm font-medium text-white/90 backdrop-blur-sm hover:bg-white/20 transition">{t('casestudies.lowerCosts')}</div>
-                <div className="rounded-xl border border-white/20 bg-white/10 px-6 py-4 text-sm font-medium text-white/90 backdrop-blur-sm hover:bg-white/20 transition">{t('casestudies.shorterTime')}</div>
-                <div className="rounded-xl border border-white/20 bg-white/10 px-6 py-4 text-sm font-medium text-white/90 backdrop-blur-sm hover:bg-white/20 transition">{t('casestudies.higherQuality')}</div>
+                <div className="rounded-xl border px-6 py-4 text-sm font-medium backdrop-blur-sm transition cursor-pointer border-white/20 bg-white/10 text-white/90 hover:bg-white/20 dark:border-primary/30 dark:bg-primary/15 dark:text-primary-foreground dark:hover:bg-primary/25 dark:hover:border-primary/40">{t('casestudies.lowerCosts')}</div>
+                <div className="rounded-xl border px-6 py-4 text-sm font-medium backdrop-blur-sm transition cursor-pointer border-white/20 bg-white/10 text-white/90 hover:bg-white/20 dark:border-primary/30 dark:bg-primary/15 dark:text-primary-foreground dark:hover:bg-primary/25 dark:hover:border-primary/40">{t('casestudies.shorterTime')}</div>
+                <div className="rounded-xl border px-6 py-4 text-sm font-medium backdrop-blur-sm transition cursor-pointer border-white/20 bg-white/10 text-white/90 hover:bg-white/20 dark:border-primary/30 dark:bg-primary/15 dark:text-primary-foreground dark:hover:bg-primary/25 dark:hover:border-primary/40">{t('casestudies.higherQuality')}</div>
               </div>
 
               <a href="#contact">
