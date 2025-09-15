@@ -7,12 +7,12 @@ import { useLanguage } from "@/hooks/useLanguage";
 
 const Header = () => {
   const { language, setLanguage, t } = useLanguage();
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    // Ensure dark is default on first render
-    document.documentElement.classList.add("dark");
-    document.documentElement.classList.remove("light");
+    // Ensure light is default on first render
+    document.documentElement.classList.add("light");
+    document.documentElement.classList.remove("dark");
   }, []);
 
   const toggleLanguage = () => {
