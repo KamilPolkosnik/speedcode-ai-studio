@@ -29,6 +29,7 @@ const HeroSection = () => {
             </h2>
             
             <div className="flex justify-center lg:justify-start">
+            <a href="#contact">
               <Button 
                 type="button"
                 size="lg"
@@ -36,6 +37,7 @@ const HeroSection = () => {
               >
                 ROZPOCZNIJMY ROZMOWĘ
               </Button>
+            </a>
             </div>
           </div>
           
