@@ -14,7 +14,7 @@ const ProcessSection = () => {
         { task: t('process.integration'), hours: "50h" },
         { task: t('process.management'), hours: "100h" }
       ],
-      total: "750 h",
+      total: "750h",
       rate: t('process.hourlyRateValue')
     },
     {
@@ -28,7 +28,7 @@ const ProcessSection = () => {
         { task: t('process.integration'), hours: "75h" },
         { task: t('process.management'), hours: "125h" }
       ],
-      total: "1375 h",
+      total: "1375h",
       rate: t('process.hourlyRateValue')
     }
   ];
