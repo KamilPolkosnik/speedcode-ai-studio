@@ -48,7 +48,7 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary hover:underline underline-offset-4 transition-colors" title={t('nav.services.title')}>
+            <a href="#services" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary underline-offset-4 transition-colors" title={t('nav.services.title')}>
               {t('nav.services')}
             </a>
             <a href="#case-studies" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary hover:underline underline-offset-4 transition-colors" title={t('nav.projects.title')}>
