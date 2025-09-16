@@ -51,16 +51,16 @@ const Header = () => {
             <a href="#services" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary underline-offset-4 transition-colors" title={t('nav.services.title')}>
               {t('nav.services')}
             </a>
-            <a href="#case-studies" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary hover:underline underline-offset-4 transition-colors" title={t('nav.projects.title')}>
+            <a href="#case-studies" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary underline-offset-4 transition-colors" title={t('nav.projects.title')}>
               {t('nav.projects')}
             </a>
-            <a href="#about" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary hover:underline underline-offset-4 transition-colors" title={t('nav.about.title')}>
+            <a href="#about" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary underline-offset-4 transition-colors" title={t('nav.about.title')}>
               {t('nav.about')}
             </a>
-            <a href="#partnership" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary hover:underline underline-offset-4 transition-colors" title={t('nav.partnership.title')}>
+            <a href="#partnership" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary underline-offset-4 transition-colors" title={t('nav.partnership.title')}>
               {t('nav.partnership')}
             </a>
-            <a href="#funding" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary hover:underline underline-offset-4 transition-colors" title={t('nav.funding.title')}>
+            <a href="#funding" className="text-sm md:text-base font-medium text-foreground/90 hover:text-primary underline-offset-4 transition-colors" title={t('nav.funding.title')}>
               {t('nav.funding')}
             </a>
           </nav>
