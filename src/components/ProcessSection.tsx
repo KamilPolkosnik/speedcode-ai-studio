@@ -7,12 +7,12 @@ const ProcessSection = () => {
       title: t('process.innovative.approach'),
       color: "bg-primary",
       items: [
-        { task: t('process.requirements'), hours: "50 h" },
-        { task: t('process.design'), hours: "100 h" },
-        { task: t('process.implementation'), hours: "350 h" },
-        { task: t('process.deployment'), hours: "100 h" },
-        { task: t('process.integration'), hours: "50 h" },
-        { task: t('process.management'), hours: "100 h" }
+        { task: t('process.requirements'), hours: "50h" },
+        { task: t('process.design'), hours: "100h" },
+        { task: t('process.implementation'), hours: "350h" },
+        { task: t('process.deployment'), hours: "100h" },
+        { task: t('process.integration'), hours: "50h" },
+        { task: t('process.management'), hours: "100h" }
       ],
       total: "750 h",
       rate: t('process.hourlyRateValue')
@@ -21,12 +21,12 @@ const ProcessSection = () => {
       title: t('process.traditional.approach'),
       color: "bg-muted",
       items: [
-        { task: t('process.requirements'), hours: "200 h" },
-        { task: t('process.design'), hours: "125 h" },
-        { task: t('process.implementation'), hours: "600 h" },
-        { task: t('process.deployment'), hours: "250 h" },
-        { task: t('process.integration'), hours: "75 h" },
-        { task: t('process.management'), hours: "125 h" }
+        { task: t('process.requirements'), hours: "200h" },
+        { task: t('process.design'), hours: "125h" },
+        { task: t('process.implementation'), hours: "600h" },
+        { task: t('process.deployment'), hours: "250h" },
+        { task: t('process.integration'), hours: "75h" },
+        { task: t('process.management'), hours: "125h" }
       ],
       total: "1375 h",
       rate: t('process.hourlyRateValue')
