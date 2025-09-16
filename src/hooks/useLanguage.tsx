@@ -74,7 +74,7 @@ const translations = {
     
     // Contact Section
     'contact.hello': 'Cześć!',
-    'contact.subtitle': 'Chciałbym usłyszeć o Twoim projekcie!',
+    'contact.subtitle': 'Chcemy usłyszeć o Twoim projekcie!',
     'contact.response': 'Odpowiemy na Twoją wiadomość w ciągu 24 godzin. Tak, to TAKIE proste!',
     'contact.challenges': '1. Jakie są Twoje główne wyzwania, z którymi możemy Ci pomóc?',
     'contact.challenge.development': 'Rozwój aplikacji',
@@ -289,7 +289,7 @@ const translations = {
     
     // Contact Section
     'contact.hello': 'Hello!',
-    'contact.subtitle': 'I\'d love to hear about your project!',
+    'contact.subtitle': 'We\'d love to hear about your project!',
     'contact.response': 'We\'ll respond to your message within 24 hours. Yes, it\'s THAT simple!',
     'contact.challenges': '1. What are your main challenges we can help you with?',
     'contact.challenge.development': 'Application development',
