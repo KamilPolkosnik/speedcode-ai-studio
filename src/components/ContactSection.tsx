@@ -58,6 +58,10 @@ const ContactSection = () => {
     t("contact.challenge.integrations"),
     t("contact.challenge.ai"),
     t("contact.challenge.consulting"),
+    "Strona internetowa",
+    "Sklep internetowy",
+    "Propozycja współpracy",
+    "Wycena projektu",
   ];
 
   const budgets = [
