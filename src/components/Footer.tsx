@@ -1,4 +1,4 @@
-import speedCodeLogo from "@/assets/speedcode-logo-new.png";
+import speedCodeLogo from "@/assets/logo-nowe.png";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const Footer = () => {
@@ -12,8 +12,8 @@ const Footer = () => {
             <div className="flex items-center mb-4">
               <img 
                 src={speedCodeLogo} 
-                alt="SpeedCode" 
-                className="h-40 w-auto"
+                alt="SpeedCode logo" 
+                className="h-10 md:h-12 w-auto object-contain block"
               />
             </div>
             <p className="text-muted mb-4">

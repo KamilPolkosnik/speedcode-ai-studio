@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import speedCodeLogo from "@/assets/speedcode-logo-new.png";
+import speedCodeLogo from "@/assets/logo-nowe.png";
 import { useEffect, useState } from "react";
 import { Moon, Sun, Menu } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
@@ -40,8 +40,8 @@ const Header = () => {
           <div className="flex items-center h-16">
             <img 
               src={speedCodeLogo} 
-              alt="SpeedCode" 
-              className="h-40 w-auto"
+              alt="SpeedCode logo" 
+              className="h-full w-auto object-contain block"
             />
           </div>
           
