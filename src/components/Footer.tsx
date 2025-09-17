@@ -13,9 +13,8 @@ const Footer = () => {
               <img 
                 src={speedCodeLogo} 
                 alt="SpeedCode" 
-                className="h-8 w-auto mr-3"
+                className="h-10 w-auto"
               />
-              <span className="text-xl font-bold">SpeedCode</span>
             </div>
             <p className="text-muted mb-4">
               {t('footer.description')}

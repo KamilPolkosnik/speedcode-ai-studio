@@ -41,9 +41,8 @@ const Header = () => {
             <img 
               src={speedCodeLogo} 
               alt="SpeedCode" 
-              className="h-8 md:h-10 w-auto mr-2 md:mr-3"
+              className="h-10 md:h-12 w-auto"
             />
-            <span className="hidden sm:block text-xl md:text-2xl font-extrabold tracking-tight text-foreground">SpeedCode</span>
           </div>
           
           {/* Desktop Navigation */}
