@@ -14,7 +14,7 @@ const Footer = () => {
               <img 
                 src={speedCodeLogo} 
                 alt="SpeedCode logo" 
-                className="h-20 md:h-12 w-auto object-contain block"
+                className="h-20 w-auto object-contain block"
               />
                                         </a>
             </div>
