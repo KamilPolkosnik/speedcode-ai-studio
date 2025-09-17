@@ -41,7 +41,7 @@ const Header = () => {
             <img 
               src={speedCodeLogo} 
               alt="SpeedCode" 
-              className="h-16 md:h-20 w-auto"
+              className="h-16 md:h-26 w-auto"
             />
           </div>
           
