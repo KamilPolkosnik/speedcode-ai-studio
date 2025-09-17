@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import { Button } from "@/components/ui/button";
-import heroBlueGlow from "@/assets/hero-blue-glow.png";
+import heroF35Wireframe from "@/assets/hero-f35-wireframe.png";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const HeroSection = () => {
@@ -58,7 +58,7 @@ const HeroSection = () => {
           
           <div className="flex justify-center lg:justify-end">
             <img 
-              src={heroBlueGlow} 
+              src={heroF35Wireframe} 
               alt={t('hero.title2') + " " + t('hero.title3').split(' rozwiązania')[0]} 
               className="w-full max-w-lg h-auto"
             />
@@ -72,7 +72,7 @@ const HeroSection = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl">
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">
-                <CountUp start={1} end={40} duration={2} suffix="%" enableScrollSpy />
+                <CountUp start={1} end={40} duration={2} suffix="%" enableScrollSpy scrollSpyOnce />
               </div>
               <p className="text-m text-muted-foreground font-bold">{t('hero.faster')}</p>
             </div>

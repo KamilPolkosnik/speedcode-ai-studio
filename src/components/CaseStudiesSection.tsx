@@ -15,6 +15,9 @@ import virentiashop3 from "@/assets/virentia-shop-3.png";
 import sessio1 from "@/assets/sessio-1.png";
 import sessio2 from "@/assets/sessio-2.png";
 import sessio3 from "@/assets/sessio-3.png";
+import bookfinanse1 from "@/assets/bookfinanse-1.jpg";
+import bookfinanse2 from "@/assets/bookfinanse-2.jpg";
+import bookfinanse3 from "@/assets/bookfinanse-3.jpg";
 
 const CaseStudiesSection = () => {
   const { t } = useLanguage();
@@ -36,7 +39,7 @@ const CaseStudiesSection = () => {
       category: "CRM",
       title: "Bookfinanse",
       description: t('casestudies.bookfinanse.desc'),
-      images: []
+      images: [bookfinanse1, bookfinanse2, bookfinanse3]
     },
     {
       category: "SaaS",
@@ -234,7 +237,7 @@ const CaseStudiesSection = () => {
               </h2>
 
               <div className="text-2xl md:text-3xl font-extrabold mb-6">
-                <CountUp start={1} end={40} duration={2} suffix="%" enableScrollSpy /> {t('casestudies.fasterAndCheaper')}
+                <CountUp start={1} end={40} duration={2} suffix="%" enableScrollSpy scrollSpyOnce /> {t('casestudies.fasterAndCheaper')}
               </div>
 
               <p className="text-lg md:text-xl text-white/90 mb-8">
