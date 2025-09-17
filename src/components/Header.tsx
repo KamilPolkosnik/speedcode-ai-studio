@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import speedCodeLogo from "@/assets/speedcode-logo.png";
+import speedCodeLogo from "@/assets/speedcode-logo-new.png";
 import { useEffect, useState } from "react";
 import { Moon, Sun, Menu } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";

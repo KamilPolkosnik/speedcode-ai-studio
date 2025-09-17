@@ -1,4 +1,4 @@
-import speedCodeLogo from "@/assets/speedcode-logo.png";
+import speedCodeLogo from "@/assets/speedcode-logo-new.png";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const Footer = () => {
@@ -13,7 +13,7 @@ const Footer = () => {
               <img 
                 src={speedCodeLogo} 
                 alt="SpeedCode" 
-                className="h-8 w-auto mr-3 invert"
+                className="h-8 w-auto mr-3"
               />
               <span className="text-xl font-bold">SpeedCode</span>
             </div>
