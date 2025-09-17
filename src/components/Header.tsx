@@ -37,11 +37,11 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
+          <div className="flex items-center h-16">
             <img 
               src={speedCodeLogo} 
               alt="SpeedCode" 
-              className="h-16 w-auto object-contain"
+              className="h-full w-auto"
             />
           </div>
           
