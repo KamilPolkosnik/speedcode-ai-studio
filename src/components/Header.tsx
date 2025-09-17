@@ -38,11 +38,13 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center h-16">
-            <img 
+            <a href="#">            
+              <img 
               src={speedCodeLogo} 
               alt="SpeedCode logo" 
               className="h-14 w-auto object-contain block"
             />
+            </a>
           </div>
           
           {/* Desktop Navigation */}
