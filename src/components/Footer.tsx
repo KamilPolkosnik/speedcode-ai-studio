@@ -10,11 +10,13 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
+                          <a href="#"> 
               <img 
                 src={speedCodeLogo} 
                 alt="SpeedCode logo" 
                 className="h-10 md:h-12 w-auto object-contain block"
               />
+                                        </a>
             </div>
             <p className="text-muted mb-4">
               {t('footer.description')}
