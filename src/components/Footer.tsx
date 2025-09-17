@@ -13,7 +13,7 @@ const Footer = () => {
               <img 
                 src={speedCodeLogo} 
                 alt="SpeedCode" 
-                className="h-16 w-auto"
+                className="h-40 w-auto"
               />
             </div>
             <p className="text-muted mb-4">
