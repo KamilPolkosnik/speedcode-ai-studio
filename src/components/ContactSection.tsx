@@ -30,28 +30,20 @@ const ContactSection = () => {
     }
 
     try {
-      console.log("Sending form data to /api/contact...");
       const res = await fetch("/api/contact", {
         method: "POST",
         body: formData,
       });
 
-      console.log("Response status:", res.status);
-      
       if (!res.ok) {
-        const errorText = await res.text();
-        console.error("Server error response:", errorText);
-        throw new Error(`HTTP ${res.status}: ${errorText}`);
+        throw new Error(`HTTP ${res.status}`);
       }
 
-      const responseData = await res.json();
-      console.log("Success response:", responseData);
-      
       setSubmitSuccess(true);
       setSubmitMessage(t("contact.success"));
       form.reset();
     } catch (err) {
-      console.error("Form submission error:", err);
+      console.error(err);
       setSubmitSuccess(false);
       setSubmitMessage(t("contact.error"));
     } finally {
