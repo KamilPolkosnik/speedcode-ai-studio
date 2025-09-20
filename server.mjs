@@ -6,6 +6,27 @@ import { google } from 'googleapis';
 const app = express();
 const PORT = process.env.SERVER_PORT || 3001;
 
+// Minimal CORS for production when API is on a different origin
+const allowedOrigins = (process.env.CORS_ORIGIN || '')
+  .split(',')
+  .map((s) => s.trim())
+  .filter(Boolean);
+
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  if (origin && (allowedOrigins.includes(origin))) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+    res.setHeader('Vary', 'Origin');
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    res.setHeader('Access-Control-Allow-Methods', 'POST,OPTIONS');
+  }
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(204);
+  }
+  next();
+});
+
 app.use(express.urlencoded({ extended: true })); // x-www-form-urlencoded (zwykły <form>)
 app.use(express.json());                          // JSON (na przyszłość)
 

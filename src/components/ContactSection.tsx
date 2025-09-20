@@ -46,31 +46,47 @@ const ContactSection = () => {
 
     try {
       setIsSubmitting(true);
-      // Convert FormData -> JSON to match server parsers (express.json/urlencoded)
-      const payload: Record<string, any> = {};
+      const CONTACT_ENDPOINT = (import.meta as any).env?.VITE_CONTACT_ENDPOINT?.trim();
+      const API_BASE = (import.meta as any).env?.VITE_API_BASE?.replace(/\/$/, "") || "";
 
-      // Collect multi-value and scalar fields
-      for (const [key, value] of formData.entries()) {
-        if (key === "hp_check") continue; // skip honeypot from payload
-        if (key === "challenges") {
-          if (!payload.challenges) payload.challenges = [];
-          payload.challenges.push(String(value));
-        } else if (key !== "consent1" && key !== "consent2") {
-          payload[key] = String(value);
+      if (CONTACT_ENDPOINT) {
+        // Send to external endpoint (e.g., Google Apps Script) using FormData and no-cors
+        const fd = new FormData();
+        const challenges: string[] = [];
+        for (const [key, value] of formData.entries()) {
+          if (key === "hp_check") continue;
+          if (key === "challenges") challenges.push(String(value));
+          else if (key !== "consent1" && key !== "consent2") fd.append(key, String(value));
         }
-      }
-      // Booleans for checkboxes (presence => true)
-      payload.consent1 = formData.has("consent1");
-      payload.consent2 = formData.has("consent2");
+        challenges.forEach((v) => fd.append("challenges", v));
+        fd.append("consent1", formData.has("consent1") ? "yes" : "no");
+        fd.append("consent2", formData.has("consent2") ? "yes" : "no");
+        const fn = String(formData.get("firstName") || "").trim();
+        const ln = String(formData.get("lastName") || "").trim();
+        fd.append("_subject", `Nowe zgłoszenie: ${fn} ${ln}`.trim());
 
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+        await fetch(CONTACT_ENDPOINT, { method: "POST", body: fd, mode: "no-cors" });
+      } else {
+        // Default: send JSON to our backend
+        const payload: Record<string, any> = {};
+        for (const [key, value] of formData.entries()) {
+          if (key === "hp_check") continue;
+          if (key === "challenges") {
+            if (!payload.challenges) payload.challenges = [];
+            payload.challenges.push(String(value));
+          } else if (key !== "consent1" && key !== "consent2") {
+            payload[key] = String(value);
+          }
+        }
+        payload.consent1 = formData.has("consent1");
+        payload.consent2 = formData.has("consent2");
 
-      if (!res.ok) {
-        throw new Error(`HTTP ${res.status}`);
+        const res = await fetch(`${API_BASE}/api/contact`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
       }
 
       setSubmitSuccess(true);
