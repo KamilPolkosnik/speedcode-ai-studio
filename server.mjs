@@ -77,10 +77,23 @@ app.post('/api/contact', async (req, res) => {
     const budget    = f.budget    || '';
     const nda       = f.nda       || '';
     const challenges = arr(f.challenges);
-    const consent1  = f.consent1 ? 'TAK' : 'NIE';
+    const consent1Bool = f.consent1 === true || f.consent1 === 'yes' || f.consent1 === 'on' || f.consent1 === 'true' || f.consent1 === 1 || f.consent1 === '1';
+    const consent1  = consent1Bool ? 'TAK' : 'NIE';
+    const hasContact = (String(email).trim() !== '') || (String(phone).trim() !== '');
+
+    // Basic server-side validation (mirrors frontend)
+    if (!String(firstName).trim()) {
+      return res.status(400).json({ ok: false, error: 'FIRST_NAME_REQUIRED' });
+    }
+    if (!hasContact) {
+      return res.status(400).json({ ok: false, error: 'CONTACT_REQUIRED' });
+    }
+    if (!consent1Bool) {
+      return res.status(400).json({ ok: false, error: 'CONSENT_REQUIRED' });
+    }
     const consent2  = f.consent2 ? 'TAK' : 'NIE';
 
-    const subject = 'Nowe zgłoszenie ze strony';
+    const subject = 'Nowy formularz ze strony';
     const text = `
 Imię: ${firstName}
 Nazwisko: ${lastName}

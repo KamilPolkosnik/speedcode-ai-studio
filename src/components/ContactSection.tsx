@@ -10,12 +10,13 @@ const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState<null | boolean>(null);
   const [submitMessage, setSubmitMessage] = useState<string>("");
+  const [errors, setErrors] = useState<{ firstName?: string; contact?: string; consent1?: string }>({});
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
     setSubmitSuccess(null);
     setSubmitMessage("");
+    setErrors({});
 
     const form = e.currentTarget;
     const formData = new FormData(form);
@@ -25,14 +26,47 @@ const ContactSection = () => {
     if (hpChecked) {
       setSubmitSuccess(false);
       setSubmitMessage(t("contact.error"));
-      setIsSubmitting(false);
+      return;
+    }
+
+    // Client-side validation: first name required, phone or email required, consent1 required
+    const firstName = String(formData.get("firstName") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const phone = String(formData.get("phone") || "").trim();
+    const hasConsent1 = formData.has("consent1");
+
+    const nextErrors: { firstName?: string; contact?: string; consent1?: string } = {};
+    if (!firstName) nextErrors.firstName = "Podaj imię";
+    if (!email && !phone) nextErrors.contact = "Podaj numer telefonu lub adres e-mail";
+    if (!hasConsent1) nextErrors.consent1 = "Zaznacz zgodę na kontakt";
+    if (nextErrors.firstName || nextErrors.contact || nextErrors.consent1) {
+      setErrors(nextErrors);
       return;
     }
 
     try {
+      setIsSubmitting(true);
+      // Convert FormData -> JSON to match server parsers (express.json/urlencoded)
+      const payload: Record<string, any> = {};
+
+      // Collect multi-value and scalar fields
+      for (const [key, value] of formData.entries()) {
+        if (key === "hp_check") continue; // skip honeypot from payload
+        if (key === "challenges") {
+          if (!payload.challenges) payload.challenges = [];
+          payload.challenges.push(String(value));
+        } else if (key !== "consent1" && key !== "consent2") {
+          payload[key] = String(value);
+        }
+      }
+      // Booleans for checkboxes (presence => true)
+      payload.consent1 = formData.has("consent1");
+      payload.consent2 = formData.has("consent2");
+
       const res = await fetch("/api/contact", {
         method: "POST",
-        body: formData,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
 
       if (!res.ok) {
@@ -322,22 +356,32 @@ const ContactSection = () => {
                       <Input
                         name="firstName"
                         placeholder={t("contact.firstName")}
+                        aria-invalid={!!errors.firstName}
+                        aria-describedby={errors.firstName ? "err-firstName" : undefined}
                       />
                       <Input
                         name="lastName"
                         placeholder={t("contact.lastName")}
                       />
                     </div>
+                    {errors.firstName ? (
+                      <p id="err-firstName" className="text-sm font-medium text-destructive">{errors.firstName}</p>
+                    ) : null}
                     <Input
                       name="email"
                       placeholder={t("contact.email")}
                       type="email"
+                      aria-invalid={!!errors.contact}
                     />
                     <Input
                       name="phone"
                       placeholder={t("contact.phone")}
                       type="tel"
+                      aria-invalid={!!errors.contact}
                     />
+                    {errors.contact ? (
+                      <p className="text-sm font-medium text-destructive">{errors.contact}</p>
+                    ) : null}
                     <Input name="company" placeholder={t("contact.company")} />
                     <Textarea
                       name="message"
@@ -356,6 +400,7 @@ const ContactSection = () => {
                       name="consent1"
                       value="yes"
                       className="mt-1 h-4 w-4"
+                      aria-invalid={!!errors.consent1}
                     />
                     <label
                       htmlFor="consent1"
@@ -364,6 +409,9 @@ const ContactSection = () => {
                       {t("contact.consent1")}
                     </label>
                   </div>
+                  {errors.consent1 ? (
+                    <p className="text-sm font-medium text-destructive">{errors.consent1}</p>
+                  ) : null}
                   <div className="flex items-start space-x-2">
                     <input
                       type="checkbox"
