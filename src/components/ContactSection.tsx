@@ -50,22 +50,27 @@ const ContactSection = () => {
       const API_BASE = (import.meta as any).env?.VITE_API_BASE?.replace(/\/$/, "") || "";
 
       if (CONTACT_ENDPOINT) {
-        // Send to external endpoint (e.g., Google Apps Script) using FormData and no-cors
-        const fd = new FormData();
+        // Send to external endpoint (e.g., Google Apps Script) using URL-encoded body (more reliable for GAS)
+        const params = new URLSearchParams();
         const challenges: string[] = [];
         for (const [key, value] of formData.entries()) {
           if (key === "hp_check") continue;
           if (key === "challenges") challenges.push(String(value));
-          else if (key !== "consent1" && key !== "consent2") fd.append(key, String(value));
+          else if (key !== "consent1" && key !== "consent2") params.append(key, String(value));
         }
-        challenges.forEach((v) => fd.append("challenges", v));
-        fd.append("consent1", formData.has("consent1") ? "yes" : "no");
-        fd.append("consent2", formData.has("consent2") ? "yes" : "no");
+        challenges.forEach((v) => params.append("challenges", v));
+        params.append("consent1", formData.has("consent1") ? "yes" : "no");
+        params.append("consent2", formData.has("consent2") ? "yes" : "no");
         const fn = String(formData.get("firstName") || "").trim();
         const ln = String(formData.get("lastName") || "").trim();
-        fd.append("_subject", `Nowe zgłoszenie: ${fn} ${ln}`.trim());
+        params.append("_subject", `Nowe zgłoszenie: ${fn} ${ln}`.trim());
 
-        await fetch(CONTACT_ENDPOINT, { method: "POST", body: fd, mode: "no-cors" });
+        await fetch(CONTACT_ENDPOINT, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+          body: params.toString(),
+        });
       } else {
         // Default: send JSON to our backend
         const payload: Record<string, any> = {};
