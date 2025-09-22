@@ -172,7 +172,7 @@ const ContactSection = () => {
                     <p className="text-muted-foreground">
                       CEO & Head of Technology / SpeedCode
                     </p>
-                    <div className="flex gap-2">
+                    <div className="flex flex-col gap-2">
                       <a href="tel:+48600469129">
                         <Button
                           className="bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] mt-2 px-4 py-2 text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)]"
@@ -208,7 +208,7 @@ const ContactSection = () => {
                     <p className="text-muted-foreground">
                       CEO & Head of Business Operations / SpeedCode
                     </p>
-                    <div className="flex gap-2">
+                    <div className="flex flex-col gap-2">
                       <a href="tel:+48533821998">
                         <Button
                           className="bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] mt-2 px-4 py-2 text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)]"
