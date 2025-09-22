@@ -67,10 +67,12 @@ const ContactSection = () => {
 
         const response = await fetch(CONTACT_ENDPOINT, {
           method: "POST",
-          mode: "no-cors",
           headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
           body: params.toString(),
         });
+        
+        console.log("Response status:", response.status);
+        console.log("Response text:", await response.text());
         
         // W trybie no-cors nie możemy sprawdzić response status, więc zakładamy sukces
         setSubmitSuccess(true);
