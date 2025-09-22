@@ -13,10 +13,13 @@ const ContactSection = () => {
   const [errors, setErrors] = useState<{ firstName?: string; contact?: string; consent1?: string }>({});
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    console.log("🚀 handleSubmit wywołany!");
     e.preventDefault();
     setSubmitSuccess(null);
     setSubmitMessage("");
     setErrors({});
+    
+    console.log("📧 VITE_CONTACT_ENDPOINT:", (import.meta as any).env?.VITE_CONTACT_ENDPOINT);
 
     const form = e.currentTarget;
     const formData = new FormData(form);
