@@ -161,7 +161,7 @@ const ContactSection = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="space-y-6">
               <Card className="p-6 bg-card/80 border border-border">
                 <div className="flex items-center space-x-4">
                   <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl">
