@@ -13,13 +13,10 @@ const ContactSection = () => {
   const [errors, setErrors] = useState<{ firstName?: string; contact?: string; consent1?: string }>({});
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    console.log("🚀 handleSubmit wywołany!");
     e.preventDefault();
     setSubmitSuccess(null);
     setSubmitMessage("");
     setErrors({});
-    
-    console.log("📧 VITE_CONTACT_ENDPOINT:", (import.meta as any).env?.VITE_CONTACT_ENDPOINT);
 
     const form = e.currentTarget;
     const formData = new FormData(form);
@@ -68,9 +65,6 @@ const ContactSection = () => {
         const ln = String(formData.get("lastName") || "").trim();
         params.append("_subject", `Nowe zgłoszenie: ${fn} ${ln}`.trim());
 
-        console.log("Wysyłam request do:", CONTACT_ENDPOINT);
-        console.log("Dane formularza:", params.toString());
-        
         const response = await fetch(CONTACT_ENDPOINT, {
           method: "POST",
           mode: "no-cors",
@@ -78,8 +72,9 @@ const ContactSection = () => {
           body: params.toString(),
         });
         
-        console.log("Response status:", response.status);
-        console.log("Response:", response);
+        // W trybie no-cors nie możemy sprawdzić response status, więc zakładamy sukces
+        setSubmitSuccess(true);
+        setSubmitMessage("Dziękujemy za przesłanie formularza! Skontaktujemy się z Tobą w najbliższym czasie.");
       } else {
         // Default: send JSON to our backend
         const payload: Record<string, any> = {};
