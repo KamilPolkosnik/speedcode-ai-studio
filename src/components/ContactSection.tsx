@@ -172,15 +172,26 @@ const ContactSection = () => {
                     <p className="text-muted-foreground">
                       CEO & Head of Technology / SpeedCode
                     </p>
-                    <a href="tel:+48600469129">
-                      <Button
-                        className="bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] mt-2 px-4 py-2 text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)]"
-                        title={"+48 600 469 129"}
-                        aria-label={`Zadzwoń +48 600 469 129`}
-                      >
-                        +48 600 469 129
-                      </Button>
-                    </a>
+                    <div className="flex gap-2">
+                      <a href="tel:+48600469129">
+                        <Button
+                          className="bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] mt-2 px-4 py-2 text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)]"
+                          title={"+48 600 469 129"}
+                          aria-label={`Zadzwoń +48 600 469 129`}
+                        >
+                          +48 600 469 129
+                        </Button>
+                      </a>
+                      <a href="mailto:kontakt@speedcode.eu">
+                        <Button
+                          className="bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] mt-2 px-4 py-2 text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)]"
+                          title="kontakt@speedcode.eu"
+                          aria-label="Wyślij email do kontakt@speedcode.eu"
+                        >
+                          kontakt@speedcode.eu
+                        </Button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </Card>
@@ -197,23 +208,34 @@ const ContactSection = () => {
                     <p className="text-muted-foreground">
                       CEO & Head of Business Operations / SpeedCode
                     </p>
-                    <a href="tel:+48533821998">
-                      <Button
-                        className="bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] mt-2 px-4 py-2 text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)]"
-                        title={"+48 533 821 998"}
-                        aria-label={`Zadzwoń +48 533 821 998`}
-                      >
-                        +48 533 821 998
-                      </Button>
-                    </a>
+                    <div className="flex gap-2">
+                      <a href="tel:+48533821998">
+                        <Button
+                          className="bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] mt-2 px-4 py-2 text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)]"
+                          title={"+48 533 821 998"}
+                          aria-label={`Zadzwoń +48 533 821 998`}
+                        >
+                          +48 533 821 998
+                        </Button>
+                      </a>
+                      <a href="mailto:aureliusz@speedcode.eu">
+                        <Button
+                          className="bg-[#2F6BFF] hover:bg-[#2A5FF0] text-white rounded-[20px] mt-2 px-4 py-2 text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(47,107,255,0.45)]"
+                          title="aureliusz@speedcode.eu"
+                          aria-label="Wyślij email do aureliusz@speedcode.eu"
+                        >
+                          aureliusz@speedcode.eu
+                        </Button>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </Card>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <Card className="p-8">
+          {/* Contact Form - Hidden */}
+          <Card className="p-8 hidden">
             {isSubmitting || submitSuccess !== null ? (
               <div className="p-10 flex flex-col items-center justify-center text-center min-h-[320px]">
                 {isSubmitting ? (
