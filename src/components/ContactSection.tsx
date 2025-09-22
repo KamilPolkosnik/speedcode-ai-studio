@@ -72,11 +72,22 @@ const ContactSection = () => {
         });
         
         console.log("Response status:", response.status);
-        console.log("Response text:", await response.text());
+        const responseText = await response.text();
+        console.log("Response text:", responseText);
         
-        // W trybie no-cors nie możemy sprawdzić response status, więc zakładamy sukces
-        setSubmitSuccess(true);
-        setSubmitMessage("Dziękujemy za przesłanie formularza! Skontaktujemy się z Tobą w najbliższym czasie.");
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${responseText}`);
+        }
+        
+        // Sprawdź czy response jest prawidłowy JSON
+        try {
+          const result = JSON.parse(responseText);
+          if (!result.ok) {
+            throw new Error(result.error || "Błąd serwera");
+          }
+        } catch (parseError) {
+          console.warn("Response is not JSON, assuming success");
+        }
       } else {
         // Default: send JSON to our backend
         const payload: Record<string, any> = {};
