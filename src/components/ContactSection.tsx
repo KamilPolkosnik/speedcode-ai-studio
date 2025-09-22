@@ -46,7 +46,7 @@ const ContactSection = () => {
 
     try {
       setIsSubmitting(true);
-      const CONTACT_ENDPOINT = "https://script.google.com/macros/s/AKfycbzyWOSp-FUt9ubOlJ1QWilo-jtU0OhnATNUuEyT69XGN42jgXyI8l5MFoYHhnES2c0/exec";
+      const CONTACT_ENDPOINT = "https://script.google.com/macros/s/AKfycbz-mlkcJNJ5hoDb0ZSwkf2PEG43_ukONHBp4cNXSKesqpq7qyGOOByDMCoi_Iwg0TP1/exec";
       const API_BASE = (import.meta as any).env?.VITE_API_BASE?.replace(/\/$/, "") || "";
 
       if (CONTACT_ENDPOINT) {
