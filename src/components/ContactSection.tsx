@@ -65,12 +65,18 @@ const ContactSection = () => {
         const ln = String(formData.get("lastName") || "").trim();
         params.append("_subject", `Nowe zgłoszenie: ${fn} ${ln}`.trim());
 
-        await fetch(CONTACT_ENDPOINT, {
+        console.log("Wysyłam request do:", CONTACT_ENDPOINT);
+        console.log("Dane formularza:", params.toString());
+        
+        const response = await fetch(CONTACT_ENDPOINT, {
           method: "POST",
           mode: "no-cors",
           headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
           body: params.toString(),
         });
+        
+        console.log("Response status:", response.status);
+        console.log("Response:", response);
       } else {
         // Default: send JSON to our backend
         const payload: Record<string, any> = {};
